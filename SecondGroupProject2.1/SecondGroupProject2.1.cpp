@@ -2618,54 +2618,54 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// Ask a prisoner about Madanach.
-	hintVector[712] = "";
-	hintVector[713] = "";
+	hintVector[712] = "After talking to the orc guard, leave your cell and go down to where a guy named Uraccen is sitting by a fire.";
+	hintVector[713] = "Ask him where Madanach is to get the next objective.";
 	// Get past Borkul the Beast.
-	hintVector[714] = "";
-	hintVector[715] = "";
-	hintVector[716] = "";
-	hintVector[717] = "";
-	hintVector[718] = "";
+	hintVector[714] = "You'll find Borkul next to a locked gate nearby.";
+	hintVector[715] = "Talk to Borkul about seeing Madanach to learn that he wants you to get him a shiv.";
+	hintVector[716] = "First, try using the persuade option. If that fails, you might want to try brawling with him.";
+	hintVector[717] = "Another option is to pickpocket the key from him. For some reason, he won't pay any attention when you open the gate with the key after pickpocketing it.";
+	hintVector[718] = "The only other option is to ask him about the shiv he wants, then go get it for him.";
 	// Talk to Madanach.
-	hintVector[719] = "";
-	hintVector[720] = "";
+	hintVector[719] = "Go through Borkul's gate and down the tunnel to find Madanach sitting at a table and writing.";
+	hintVector[720] = "Talk to him, choosing whichever dialogue options you want, until you get the next objective.";
 	// Hear Braig's story.
-	hintVector[721] = "";
-	hintVector[722] = "";
+	hintVector[721] = "Go back the way you came until you reach the central cave area, then return to Grisvar the Unlucky's side tunnel.";
+	hintVector[722] = "Continue along that tunnel until you find Braig, then talk to him to get the next objective.";
 	// Return to Madanach.
-	hintVector[723] = "";
+	hintVector[723] = "Go back to Madanach's room and talk to him to get the next objective.";
 	// Kill Grisvar the Unlucky.
-	hintVector[724] = "";
-	hintVector[725] = "";
-	hintVector[726] = "";
-	hintVector[727] = "";
-	hintVector[728] = "";
+	hintVector[724] = "If you don't have a shiv, mention that fact to Madanach to get one.";
+	hintVector[725] = "You'll then need to decide whether to aid Madanach in his escape or kill him and use his escape plan for yourself. Aiding him will get you the Old Gods armor set (see the Unique Light Armor List) as a reward, and killing him will get you the Silver-Blood Family Ring (see the Unique Rings List) instead. Also note that aiding him requires much less combat than killing him.";
+	hintVector[726] = "If you want to kill Madanach, sneak-attack him with a shiv to get the \"Kill Madanach\" objective. Otherwise, continue with this objective.";
+	hintVector[727] = "Go find Grisvar the Unlucky is his usual area, then talk to him and say that Madanach says hello.";
+	hintVector[728] = "He'll turn hostile, but you don't have to fight him yourself. Just dodge his blows (if necessary) until the other mine residents finish him off for you.";
 	// Return to Madanach.
-	hintVector[729] = "";
+	hintVector[729] = "Return to Madanach's room and tell him that Grisvar is dead to get the next objective.";
 	// Follow Madanach.
-	hintVector[730] = "";
-	hintVector[731] = "";
-	hintVector[732] = "";
-	hintVector[733] = "";
-	hintVector[734] = "";
-	hintVector[735] = "";
-	hintVector[736] = "";
+	hintVector[730] = "Follow Madanach to the central cave area, then wait until he talks to you.";
+	hintVector[731] = "Follow him some more he goes through a door to the Markarth Ruins area.";
+	hintVector[732] = "Go through the door, then keep following him along, letting him and the others fight the spiders and dwarven machines as you come to them.";
+	hintVector[733] = "You'll eventually reach the exit area, where Madanach will talk to you. After he returns all your confiscated goods and gives you the Old Gods armor set, follow him out the door.";
+	hintVector[734] = "NOTE: Right after Madanach gives you your stuff, you can equip your best armor and weapon, then quickly attack him before he leaves. It'll be *very* tough, but if you can kill him and his followers, you can go outside and talk to Thonar Silver-Blood to get the other quest reward, too. When Madanach dies, you'll jump to the \"Search Madanach's body\" objective.";
+	hintVector[735] = "Wait for the quest to end, after which Madanach and the other escapees will fight their way out of the city. You won't have to do that, and can fast-travel away if you like -- though you might find it more profitable to follow the forsworn along and loot their victims. (Also, return to the Shrine of Talos and loot Eltrys' body to find a good chunk of gold.)";
+	hintVector[736] = "One final note is that the forsworn at the Druadach Redoubt will be friendly to you from now on.";
 	// Kill Madanach.
-	hintVector[737] = "";
-	hintVector[738] = "";
+	hintVector[737] = "Madanach has quite a bit of health and knows some magic, so he'll be hard to kill if you're not really good with one-handed weapons and magic spells. A high magic resistance would also be helpful.";
+	hintVector[738] = "If you can manage to kill him, you'll get the next objective.";
 	// Search Madanach's body.
-	hintVector[739] = "";
+	hintVector[739] = "Loot Madanach's body to get his note and the next objective.";
 	// Read Madanach's note.
-	hintVector[740] = "";
+	hintVector[740] = "Read the note you got from Madanach in the \"books\" section of your inventory to get the next objective.";
 	// Escape Cidhna Mine.
-	hintVector[741] = "";
-	hintVector[742] = "";
-	hintVector[743] = "";
-	hintVector[744] = "";
-	hintVector[745] = "";
-	hintVector[746] = "";
-	hintVector[747] = "";
-	hintVector[748] = "";
+	hintVector[741] = "Get the key from Madanach's body if you haven't already, then open the locked barred door that's nearby.";
+	hintVector[742] = "Go down the tunnel past it to find a large golden door that leads into the Markarth Ruins area.";
+	hintVector[743] = "Move through the ruins until you go up some stone steps, then look a short way past them for a dwarven-style chest. It may have some items in it that'll be useful in the upcoming combats.";
+	hintVector[744] = "When you start seeing spider webs, look for a couple of frostbite spiders to kill just ahead.";
+	hintVector[745] = "In the area past theirs, you'll encounter two dwarven spheres. They'll be difficult to take down unless you have some strong magic to use against them (and to protect yourself with).";
+	hintVector[746] = "Look on the lower floor of the spheres' area for some potions and a chest to loot, then move on to find the exit doors.";
+	hintVector[747] = "After you exit, Thonar Silver-Blood will talk to you. He'll give you the Silver-Blood Family Ring and all of your confiscated inventory items, after which the quest will end.";
+	hintVector[748] = "TIP: Return to the Shrine of Talos and loot Eltrys' body to find a good chunk of gold.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Promises to Keep - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2678,28 +2678,28 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// Speak to Sibbi Black - Briar.
-	hintVector[749] = "";
-	hintVector[750] = "";
-	hintVector[751] = "";
-	hintVector[752] = "";
+	hintVector[749] = "Approach the entrance to Mistveil Keep, then look to the right of it for the entrance to the Riften Jail area.";
+	hintVector[750] = "To get past the locked door in the jail, talk to the seated guard and bribe him or pass a persuade check, or quicksave and try pickpocketing his jail key until you succeed.";
+	hintVector[751] = "Past the door, go straight down to the wooden railing, then go left to find Sibbi Black-Briar's cell.";
+	hintVector[752] = "Talk to him about Letrush sending you, then try to pass the persuade dialogue option that comes up. You don't have to, but it'll get you an optional objective and the key to a strong box.";
 	// Steal Frost's Lineage Papers.
-	hintVector[753] = "";
-	hintVector[754] = "";
-	hintVector[755] = "";
-	hintVector[756] = "";
-	hintVector[757] = "";
+	hintVector[753] = "You now need to go to the Black-Briar Lodge. See the Riften section of the World Map Exploration Guide if you need directions.";
+	hintVector[754] = "There are two mercenary guards near the lodge that you'll need to sneak past or kill off. Since the keys that they have will come in handy, you'll probably prefer to kill them. (Note that you won't get a bounty for it.)";
+	hintVector[755] = "Get one of the mercs' keys, then go up to the lodge's front door. Crouch down, then use the door to go inside.";
+	hintVector[756] = "Turn right and sneak down the stairs to the basement, then look next to the bottom of the stairs for a strong box on a crate. It's the one Sibbi gave you the key to if you passed the persuade option when talking to him. If you didn't, you'll have to pick a master-level lock if you want to loot it.";
+	hintVector[757] = "Go around to the main part of the basement to find Frost's identity papers on an end table. Take them to get the \"Steal Frost\" objective.";
 	// (Optional)Steal the Lodge Stash.
-	hintVector[758] = "";
+	hintVector[758] = "The lodge's stash is in a strong box in the basement. See the \"Steal Frost's Lineage Papers\" objective hints for details on how to get to it, then loot it to finish this objective.";
 	// Steal Frost.
-	hintVector[759] = "";
-	hintVector[760] = "";
+	hintVector[759] = "Sneak back out the way you came in, then go over to the nearby stables and look in or near them for the horse named Frost.";
+	hintVector[760] = "Mount Frost to get the next objective.";
 	// Return to Louis Letrush.
-	hintVector[761] = "";
-	hintVector[762] = "";
-	hintVector[763] = "";
-	hintVector[764] = "";
-	hintVector[765] = "";
-	hintVector[766] = "";
+	hintVector[761] = "Ride Frost over to where the quest arrow marks Letrush's current location. (Note that it's near Fallowstone Cave, so fast-travel there if you've already discovered it.)";
+	hintVector[762] = "Letrush may be under attack by wolves or spiders when you arrive. If so, dismount and help him kill them.";
+	hintVector[763] = "Talk to him after the combat is over. If he says he doesn't see Frost, then get back on Frost and ride him over to where he's right next to Letrush, then dismount and talk to Letrush again.";
+	hintVector[764] = "You'll have three dialogue options to choose from. The first one gets you some gold, after which Letrush runs off without Frost for some reason. That doesn't mean Frost is yours, though -- he'll still count as stolen, and he won't follow you around when you fast-travel.";
+	hintVector[765] = "If you want to make Frost your horse, you'll have to pass a persuade check when you talk to Letrush, or use the third dialogue option. It'll supposedly start a combat with Letrush, but due to a glitch, he may just run away without turning hostile.";
+	hintVector[766] = "The advantage to passing the persuade option is that you'll get the horse and the gold (and some Speech skill practice), but the disadvantage is that a thug sent by Letrush will attack you in a random world encounter sometime later on. The advantage of using the third option is that you don't have to pass a persuade check, but the disadvantage is that you don't get the gold (unless you attack and kill Letrush, or pickpocket him).";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Repairing the Phial - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2712,24 +2712,24 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// Speak to Quintus Navale.
-	hintVector[767] = "";
+	hintVector[767] = "Return to the White Phial shop in Windhelm and talk to Quintus about receiving his letter to get the next three objectives.";
 	// Retrieve the Unmelting Snow.
-	hintVector[768] = "";
-	hintVector[769] = "";
+	hintVector[768] = "Return to Paarthurnax's Throat of the World location, then go over to the damaged Word Wall that he's perched on.";
+	hintVector[769] = "Go up the slope that's directly south of that to find the quest-arrow-marked \"Unmelting Snowbank,\" then activate it to take some unmelting snow.";
 	// Find some Mammoth Tusk Powder.
-	hintVector[770] = "";
-	hintVector[771] = "";
-	hintVector[772] = "";
+	hintVector[770] = "Note that this isn't the same as the powdered mammoth tusk ingredient item, so it won't do.";
+	hintVector[771] = "A quest arrow marks the giant camp called Stonehill Bluff, so go there. See the Whiterun section of the World Map Exploration Guide if you need directions.";
+	hintVector[772] = "Follow the quest arrow to a large stone bowl with the mammoth tusk powder in it. If you're careful, you'll be able to get the powder and leave without antagonizing any of the giants.";
 	// Take a Forsworn Heart.
-	hintVector[773] = "";
-	hintVector[774] = "";
-	hintVector[775] = "";
+	hintVector[773] = "Any briar heart ingredient item will do, though they're fairly rare, and it may be awhile before you find one randomly in an alchemy store's inventory.";
+	hintVector[774] = "The surest way to get a briar heart is to kill a forsworn briarheart and loot his body.";
+	hintVector[775] = "You can find forsworn briarhearts in several different areas, including at Bard's Leap Summit (see the Falkreath section of the World Map Exploration Guide), in Broken Tower Redoubt (\"The Heart of Dibella\" side quest), and at Red Eagle Redoubt (\"Find Red Eagle's sword\" Markarth miscellaneous quest).";
 	// Return to Quintus Navale.
-	hintVector[776] = "";
-	hintVector[777] = "";
-	hintVector[778] = "";
-	hintVector[779] = "";
-	hintVector[780] = "";
+	hintVector[776] = "Return to the White Phial and tell Quintus that you have the materials he requested.";
+	hintVector[777] = "Follow him along until he talks to you, at which time he'll ask you how you want the White Phial attuned.";
+	hintVector[778] = "You'll have six choices. Which one you choose will determine what type of potion will appear in the White Phial once every 24 hours.";
+	hintVector[779] = "The options, in top-to-bottom order, are: Restore Health, Resist Magic, Fortify Stamina, Fortify Magicka, Fortify One-Handed, Fortify Sneak.";
+	hintVector[780] = "You'll find the White Phial in the \"potions\" section of your inventory, and it'll start out full. You can use it to drink its contents, after which it'll be 24 hours before it refills with the same type of potion.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Rise in the East - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2747,39 +2747,39 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// Steal Suvaris Atheron's logbook.
-	hintVector[781] = "";
-	hintVector[782] = "";
-	hintVector[783] = "";
+	hintVector[781] = "Leave the East Empire Company building and go next door to the Clan Shatter-Shield Office building.";
+	hintVector[782] = "If you can't pick the lock on the door, find Torbjorn Shatter-Shield and pickpocket his office key. (He'll usually be in the market area or the Clan Shatter-Shield house.)";
+	hintVector[783] = "Go to the back left corner of the Shatter-Shield office to find Atheron's logbook next to a large business ledger. Take the logbook to get the next objective.";
 	// Give the logbook to Orthus.
-	hintVector[784] = "";
+	hintVector[784] = "Return to the East Empire Company building and talk to Orthus about the logbook to get the next objective.";
 	// Talk to Stig Salt - Plank.
-	hintVector[785] = "";
-	hintVector[786] = "";
-	hintVector[787] = "";
+	hintVector[785] = "Go to Dawnstar and look for Stig Salt-Plank in the inn.";
+	hintVector[786] = "Instead of talking to him, you could pickpocket his \"Blood Horker Orders\" document to get the next objective.";
+	hintVector[787] = "If you talk to him, you'll have to either bribe him or beat him in a brawl to get the next objective.";
 	// Report back to Orthus.
-	hintVector[788] = "";
-	hintVector[789] = "";
+	hintVector[788] = "Return to Windhelm's East Empire Company building and talk to Orthus.";
+	hintVector[789] = "Then talk to Adelaisa Vendicci to get the next objective.";
 	// Depart for Japhet's Folly.
-	hintVector[790] = "";
-	hintVector[791] = "";
+	hintVector[790] = "Exit the East Empire Company building and look nearby for a quest-arrow-marked mercenary.";
+	hintVector[791] = "When you're ready to go, talk to him and say \"let\'s go.\"";
 	// Talk to Adelaisa.
-	hintVector[792] = "";
+	hintVector[792] = "Find Adelaisa on the deck nearby and talk to her to get the next objective.";
 	// Kill Haldyn.
-	hintVector[793] = "";
-	hintVector[794] = "";
-	hintVector[795] = "";
-	hintVector[796] = "";
-	hintVector[797] = "";
-	hintVector[798] = "";
-	hintVector[799] = "";
+	hintVector[793] = "The ship you're on isn't going anywhere, so jump off of it and head south across the ice floes.";
+	hintVector[794] = "Follow the quest arrow to find the entrance to a sea cave, then go inside.";
+	hintVector[795] = "Move through the water and kill a couple of mudcrabs, then go up the snowy path to reach another mudcrab and a big wall hole that you can go through to find your first Blood Horker pirate.";
+	hintVector[796] = "Go up the stairs and through the door to enter the Japhet's Folly Towers area, then go up the large staircase to find a couple more Blood Horkers (and a swinging gate trap).";
+	hintVector[797] = "Past the stairs, go through a wooden door and down a long passage, then go through the SW doorway and down some stairs if you want some optional combat and loot. The NE doorway leads to some stairs going up, which is the way you need to go.";
+	hintVector[798] = "Past the stairs, sneak through one doorway and over to another one so you can get a sneak attack on Haldyn. He'll mainly use shock damage spells against you, so hopefully you have some shock resistance and/or magic resistance.";
+	hintVector[799] = "When you kill Haldyn, you'll get the next objective.";
 	// Report back to Adelaisa.
-	hintVector[800] = "";
-	hintVector[801] = "";
-	hintVector[802] = "";
+	hintVector[800] = "Get the key from Haldyn's body, then go back down the stairs and along the passage until you find a door leading outside.";
+	hintVector[801] = "Haldyn's key will open it for you, so go through it and start fighting your way east through the outer structures.";
+	hintVector[802] = "Kill off the Blood Horkers who are near Adelaisa, then talk to her to get the next objective.";
 	// Speak to Adelaisa to return.
-	hintVector[803] = "";
+	hintVector[803] = "When you're ready to leave Japhet's Folly, talk to Adelaisa and say \"let\'s go.\" (Note that you\'ll be able to fast - travel back here later on.)";
 	// Speak to Orthus.
-	hintVector[804] = "";
+	hintVector[804] = "You'll be back at the Windhelm docks, so enter the East Empire Company building and talk to Orthus to finish the quest and get some gold. Note that Adelaisa will be a follower from now on.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Rising at Dawn - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2794,32 +2794,32 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// How can I become a vampire ?
-	hintVector[805] = "";
-	hintVector[806] = "";
-	hintVector[807] = "";
-	hintVector[808] = "";
+	hintVector[805] = "To start with, let a vampire assault you until you contract the Sanguinare Vampiris disease. (Note that catching that disease won't be possible if you're a werewolf. See the Companions faction quests for more information on that.)";
+	hintVector[806] = "See the \"Locations By Type\" section of the World Map Exploration Guide to find out where all the vampire lairs are, and take along plenty of healing potions so you won't be killed while letting vampires attack you.";
+	hintVector[807] = "Once you catch the vampire disease, kill off any nearby vampires, then refrain from using anything that will cure diseases (including shrines) for three days.";
+	hintVector[808] = "Soon after three days have passed, the screen will turn briefly red, and you'll get a notification that you've become a vampire.";
 	// How do the stages of vampirism work ?
-	hintVector[809] = "";
-	hintVector[810] = "";
-	hintVector[811] = "";
-	hintVector[812] = "";
+	hintVector[809] = "You start out as a stage 1 vampire, and you'll revert back to stage 1 every time you feed.";
+	hintVector[810] = "To feed, sneak up to a sleeping person. Activate him when you can do so unseen, then choose the \"feed\" option instead of the \"pickpocket\" option.";
+	hintVector[811] = "Every time a day passes without you feeding at all, you'll progress to the next stage of vampirism (unless you're already at stage 4).";
+	hintVector[812] = "People in towns and settlements won't be automatically hostile to you unless you're at stage 4, so you can still talk to them, do merchant business with them, and so on if your current vampirism stage is 3 or less.";
 	// Speak to Falion.
-	hintVector[813] = "";
-	hintVector[814] = "";
+	hintVector[813] = "Go to Morthal and follow the quest arrow to Falion. (If he's locked inside his house, you'll need to wait until 8 am or so.)";
+	hintVector[814] = "Talk to him about being an expert in vampirism to get the next objective.";
 	// Bring a filled Black Soul Gem to Morthal.
-	hintVector[815] = "";
-	hintVector[816] = "";
-	hintVector[817] = "";
-	hintVector[818] = "";
-	hintVector[819] = "";
-	hintVector[820] = "";
+	hintVector[815] = "Pre-filled black soul gems are only available as very rare random loot, so you'll probably need to find an empty one and then fill it.";
+	hintVector[816] = "Falion will have an empty black soul gem in his merchant inventory, as will Enthir at the College of Winterhold.";
+	hintVector[817] = "Note that there may be a special dialogue option with Falion that'll let you buy his black soul gem really cheap. If so, use it.";
+	hintVector[818] = "If you'd rather find an empty black soul gem lying around, free for the taking, then you'll need to explore Broken Fang Cave, Hob's Fall Cave, or Fort Snowhawk.";
+	hintVector[819] = "Once you have an empty black soul gem, soul-trap a hostile NPC like a bandit or necromancer in it. See the Enchanting Practice Tips for more about soul-trapping.";
+	hintVector[820] = "Return to Morthal and tell Falion that you have a filled black soul gem to get the next objective.";
 	// Meet Falion at dawn.
-	hintVector[821] = "";
-	hintVector[822] = "";
+	hintVector[821] = "Follow the quest arrow to see where you're supposed to meet Falion, then wait if necessary for him to show up (which he'll usually do at around 4 am).";
+	hintVector[822] = "When he arrives, you'll get the next objective.";
 	// Speak to Falion.
-	hintVector[823] = "";
+	hintVector[823] = "Talk to Falion to get the next objective.";
 	// Wait for Falion to complete the ritual.
-	hintVector[824] = "";
+	hintVector[824] = "Just stand and wait until the quest is completed, after which you won't be a vampire anymore. (Though you can become a vampire again the same way you did before.)";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Unfathomable Depths - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2827,10 +2827,10 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	stepVector[230] = "No Steps - Select this for hints.";
 
 	// Hints.
-	hintVector[825] = "";
-	hintVector[826] = "";
-	hintVector[827] = "";
-	hintVector[828] = "";
+	hintVector[825] = "Once you're level 14 or higher, go to Riften, then exit it using the door on its west side. Go along the board walkways until you find an argonian named From-Deepest-Fathoms, then talk to her to get this quest.";
+	hintVector[826] = "See the Riften section of the World Map Exploration Guide if you need help getting to Avanchnzel.";
+	hintVector[827] = "Once there, go up its curving stone ramps to reach a dark cave entrance.";
+	hintVector[828] = "Once there, go up its curving stone ramps to reach a dark cave entrance.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// The White Phial - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2841,22 +2841,22 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// Retrieve the White Phial.
-	hintVector[829] = "";
-	hintVector[830] = "";
-	hintVector[831] = "";
-	hintVector[832] = "";
-	hintVector[833] = "";
-	hintVector[834] = "";
-	hintVector[835] = "";
-	hintVector[836] = "";
-	hintVector[837] = "";
-	hintVector[838] = "";
+	hintVector[829] = "Travel to the Forsaken Cave and enter it, then fight your way past some animals to reach an iron door.";
+	hintVector[830] = "Move down the passage past the door until you reach the start of a long and winding draugr crypt passage. Proceed through it slowly, watching for traps and taking on the draugr one or two at a time.";
+	hintVector[831] = "At the end of the draugr passage is a door that leads to the Forsaken Crypt area.";
+	hintVector[832] = "Kill the draugr in the first room, then follow the passage along (and kill another draugr) to reach that room's upper walkway.";
+	hintVector[833] = "Cross the room on the walkway and kill the next draugr, then follow the walkway into a room with two more draugr and a large round trap in the middle of the floor.";
+	hintVector[834] = "Go through the door past the trap and across an \"encaged\" bridge, then go down a draugr-infested passage to reach another door.";
+	hintVector[835] = "Quicksave, then open it and time your way through the swinging axe trap. In the room beyond, Curalmil and several lesser draugr will rise up and attack you.";
+	hintVector[836] = "You'll probably want to quickly retreat back past the swinging axe trap and try to take them on a few at a time. Note that Curalmil is the equivalent of a draugr overlord.";
+	hintVector[837] = "Look past Curalmil's sarcophagus for some steps leading up to a treasure chest and a Word Wall, then go down the passage that's under the Word Wall to find an ancient bowl.";
+	hintVector[838] = "Activate it to pour Nurelion's mixture into it, then go past the secret door that opens to find a cracked white phial on a pedestal. Take it to get the next objective.";
 	// Bring the Phial to Nurelion.
-	hintVector[839] = "";
-	hintVector[840] = "";
-	hintVector[841] = "";
+	hintVector[839] = "Go back to Curalmil's room and through the door on its south side to find a door that leads back to the main cave area.";
+	hintVector[840] = "Use the lever that's on the wall to open a secret door, then exit the cave and return to Windhelm.";
+	hintVector[841] = "Talk to Nurelion in his shop to hand over the damaged phial and get 5 gold.";
 	// Speak to Quintus.
-	hintVector[842] = "";
+	hintVector[842] = "Talk to Quintus Navale, who's also in the shop, to get a lot more gold and finish the quest.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// The Wolf Queen Awakened - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2869,24 +2869,24 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// Speak to Styrr.
-	hintVector[843] = "";
-	hintVector[844] = "";
+	hintVector[843] = "Exit the palace and go down the street until you come to the Hall of the Dead on your left.";
+	hintVector[844] = "Enter it and talk to Styrr about Potema to get the Turn Undead spell, a key, and the next objective.";
 	// Defeat Potema.
-	hintVector[845] = "";
-	hintVector[846] = "";
-	hintVector[847] = "";
-	hintVector[848] = "";
+	hintVector[845] = "Exit the Hall of the Dead and go NW down the street to the castle courtyard, then turn right and enter the Temple of the Divines.";
+	hintVector[846] = "Go down to the area with all the shrines, then enter the nearby left-side area and go down the steps.";
+	hintVector[847] = "Go through the barred door past the steps, then go down to a hole in the wall that you can move through to enter the Potema's Catacombs area.";
+	hintVector[848] = "You'll need to get through it and two more areas to get the next objective.";
 	// Retrieve Potema's remains.
-	hintVector[849] = "";
-	hintVector[850] = "";
-	hintVector[851] = "";
+	hintVector[849] = "Go up to the open door in the back of Potema's chamber to find that she's now taken on a form that can attack you directly.";
+	hintVector[850] = "Take cover to the left or right of the doorway while blasting Potema's remains with fireballs and other ranged spells.";
+	hintVector[851] = "After you kill that manifestation, go up to the throne it was standing next to and take Potema's skull from it. That'll get you the next two objectives.";
 	// Give Potema's remains to Styrr.
-	hintVector[852] = "";
-	hintVector[853] = "";
-	hintVector[854] = "";
-	hintVector[855] = "";
+	hintVector[852] = "Go through the iron door that's in the back of the throne room, then go up the steps and along to find a door that's barred.";
+	hintVector[853] = "Use the door bar to get it out of the way, then go through the door to find a room with two slumbering draugr.";
+	hintVector[854] = "If you don't want to fight the draugr, you can just cross the room and use the exit door to get outside, then fast-travel back to Solitude.";
+	hintVector[855] = "Return to the Hall of the Dead and talk to Styrr about Potema's remains to finish this objective.";
 	// Return to Falk Firebeard.
-	hintVector[856] = "test";
+	hintVector[856] = "Return to the Blue Palace and talk to Falk Firebeard about Potema to finish the quest and get some gold and the unique Shield of Solitude. (Note that the shield is leveled, so you may want to wait to claim it until you're level 40 or higher so you'll get the best version.)";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// SIDE QUESTS ENDS HERE.
 
