@@ -48,9 +48,9 @@ int main()
 {
 	system("mode 650"); // Make the console fullscreen.
 
-	const int DEFAULTVALUE = 50; // Default value for all the vectors.
-	const int DEFAULTVALUESTEPS = 234; // Default value for all the steps.
-	const int DEFAULTVALUEHINTS = 857; // Default value for all the hints.
+	const int DEFAULTVALUE = 100; // Default value for all the vectors.
+	const int DEFAULTVALUESTEPS = 1000; // Default value for all the steps.
+	const int DEFAULTVALUEHINTS = 1000; // Default value for all the hints.
 
 	// Create a gameArray, a categoryNameVector, a questVector, a stepVector, and a hintVecor. Then resize all of them to the default value.
 	Game gameArray[1];
@@ -887,13 +887,13 @@ int main()
 							break;
 						}
 
-					} while (userStepChoice != MENUCHOICE0); // While the user's choice isn't 0.
+					} while (userStepChoice != MENUCHOICE0);					// While the user's choice isn't 0.
 				}
-				if (userCategoryChoice == 2) // Side Quests.
+				if (userCategoryChoice == 2)									// SIDE QUEST MAIN START HERE ***********************************************
 				{
-					categoryChoices(userCategoryChoice, questVector); // Get the categories
+					categoryChoices(userCategoryChoice, questVector);			// Get the categories
 
-					cin >> userQuestChoice; // Set user's input to userQuestChoice.
+					cin >> userQuestChoice;										// Set user's input to userQuestChoice.
 					cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl; // Space for output.
 
 					do
@@ -904,331 +904,1038 @@ int main()
 						{
 						case MENUCHOICE1: // The Blessings of Nature.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
-
+							STEPS = 6;
+							startSteps = 90;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
 							case MENUCHOICE1:
 								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+								hintCounter = 324;
+								hintEnd = 328;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2: //Bring NettleBane to Danica
+								hintCounter = 328;
+								hintEnd = 329;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:// Retrieve Eldergleam sap.
+								hintCounter = 329;
+								hintEnd = 335;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:// Follow Maurice.
+								hintCounter = 335;
+								hintEnd = 336;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:// Take sapling.
+								hintCounter = 336;
+								hintEnd = 337;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:// Return to Danica.
+								hintCounter = 337;
+								hintEnd = 341;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE2: // Blood on the Ice.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
-
+							STEPS = 15;
+							startSteps = 96;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1://How can I get this quest 
+								hintCounter = 341;
+								hintEnd = 344;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2://Question the witnesses
+								hintCounter = 344;
+								hintEnd = 345;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:// report to the guard.
+								hintCounter = 345;
+								hintEnd = 346;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:// Talk to Jorleif
+								hintCounter = 346;
+								hintEnd = 347;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5://Get assistance from Jorleif
+								hintCounter = 347;
+								hintEnd = 348;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:// Examine the crime scene
+								hintCounter = 348;
+								hintEnd = 354;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:// 
+								hintCounter = 354;
+								hintEnd = 360;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:// 
+								hintCounter = 360;
+								hintEnd = 362;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE9://
+								hintCounter = 362;
+								hintEnd = 369;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE10://
+								hintCounter = 369;
+								hintEnd = 374;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE11:// 
+								hintCounter = 374;
+								hintEnd = 378;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE12:// 
+								hintCounter = 378;
+								hintEnd = 381;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE13:// 
+								hintCounter = 381;
+								hintEnd = 384;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE14://
+								hintCounter = 384;
+								hintEnd = 386;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE15:// 
+								hintCounter = 386;
+								hintEnd = 388;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE3: // The Book of Love.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 14;
+							startSteps = 111;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:// Talk to Fastred
+								hintCounter = 388;
+								hintEnd = 390;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:// Talk to Fastred's parents
+								hintCounter = 390;
+								hintEnd = 391;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:// Talk to Bassianus or Klimmek
+								hintCounter = 391;
+								hintEnd = 395;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:// Return to Dinya Balu.
+								hintCounter = 395;
+								hintEnd = 396;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:// Talk to Calcemo.
+								hintCounter = 396;
+								hintEnd = 399;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:// Get advice from Yngvar.
+								hintCounter = 399;
+								hintEnd = 401;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:// Deliver poem.
+								hintCounter = 401;
+								hintEnd = 403;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:// Deliver Faleen's letter.
+								hintCounter = 403;
+								hintEnd = 405;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE9:// Return to Dinya Balu.
+								hintCounter = 405;
+								hintEnd = 406;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE10:// Put on the Amulet of Mara.
+								hintCounter = 406;
+								hintEnd = 407;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE11:// Talk to the long - dead lover.
+								hintCounter = 407;
+								hintEnd = 409;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE12:// Find Fenrig.
+								hintCounter = 409;
+								hintEnd = 411;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE13:// Bring Fenrig to Ruki.
+								hintCounter = 411;
+								hintEnd = 413;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE14:// Return to Dinya Balu.
+								hintCounter = 413;
+								hintEnd = 414;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE4: // Delayed Burial.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 1;
+							startSteps = 126;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:	//
+								hintCounter = 414;
+								hintEnd = 420;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE5: // Forbidden Legend.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 8;
+							startSteps = 127;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:	//
+								hintCounter = 420;
+								hintEnd = 422;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:	//
+								hintCounter = 422;
+								hintEnd = 428;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:	//
+								hintCounter = 428;
+								hintEnd = 429;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:	//
+								hintCounter = 429;
+								hintEnd = 437;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:	//
+								hintCounter = 437;
+								hintEnd = 447;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:	//
+								hintCounter = 447;
+								hintEnd = 448;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:	//
+								hintCounter = 448;
+								hintEnd = 454;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:	//
+								hintCounter = 454;
+								hintEnd = 457;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE6: // The Forsworn Conspiracy.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 13;
+							startSteps = 135;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:	//
+								hintCounter = 457;
+								hintEnd = 461;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:	//
+								hintCounter = 461;
+								hintEnd = 464;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:	//
+								hintCounter = 464;
+								hintEnd = 469;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:	//
+								hintCounter = 469;
+								hintEnd = 472;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:	//
+								hintCounter = 472;
+								hintEnd = 475;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:	//
+								hintCounter = 475;
+								hintEnd = 476;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:	//
+								hintCounter = 476;
+								hintEnd = 484;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:	//
+								hintCounter = 484;
+								hintEnd = 485;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE9:	//
+								hintCounter = 485;
+								hintEnd = 489;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE10:	//
+								hintCounter = 489;
+								hintEnd = 490;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE11:	//
+								hintCounter = 490;
+								hintEnd = 494;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE12:	//
+								hintCounter = 494;
+								hintEnd = 502;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE13:	//
+								hintCounter = 502;
+								hintEnd = 503;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE7: // The Golden Claw.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 1;
+							startSteps = 148;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
+							case MENUCHOICE1:	//
+								hintCounter = 503;
+								hintEnd = 506;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE8: // The Heart of Dibella.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 5;
+							startSteps = 149;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:	//How can I get this quest ?
+								hintCounter = 506;
+								hintEnd = 511;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:	//Find the future Sybil of Dibella.
+								hintCounter = 511;
+								hintEnd = 515;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:	//Rescue Fjotra from the Forsworn.
+								hintCounter = 515;
+								hintEnd = 524;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:	// Bring Fjotra to the Temple.
+								hintCounter = 524;
+								hintEnd = 527;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:	// Pray at Dibella's Altar.
+								hintCounter = 527;
+								hintEnd = 528;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE9: // In My Time of Need.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 8;
+							startSteps = 154;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:	// Pray at Dibella's Altar.
+								hintCounter = 528;
+								hintEnd = 531;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:	// Pray at Dibella's Altar.
+								hintCounter = 531;
+								hintEnd = 533;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:	// Pray at Dibella's Altar.
+								hintCounter = 533;
+								hintEnd = 538;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:	// Pray at Dibella's Altar.
+								hintCounter = 538;
+								hintEnd = 544;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:	// Pray at Dibella's Altar.
+								hintCounter = 544;
+								hintEnd = 550;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:	// Pray at Dibella's Altar.
+								hintCounter = 550;
+								hintEnd = 551;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:	// Pray at Dibella's Altar.
+								hintCounter = 551;
+								hintEnd = 555;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:	// Pray at Dibella's Altar.
+								hintCounter = 555;
+								hintEnd = 556;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE10: // Kyne's Sacred Trials.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 10;
+							startSteps = 162;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:	//Defeat the Guardian Mudcrab.
+								hintCounter = 556;
+								hintEnd = 558;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:	// Defeat the Guardian Skeever
+								hintCounter = 558;
+								hintEnd = 560;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:		// Defeat the Guardian Wolf.
+								hintCounter = 560;
+								hintEnd = 562;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:	// Return to Froki..
+								hintCounter = 562;
+								hintEnd = 563;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:	// Defeat the Guardian Bear.
+								hintCounter = 563;
+								hintEnd = 566;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:	// Defeat the Guardian Mammoth.
+								hintCounter = 566;
+								hintEnd = 569;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:	// Defeat the Guardian Sabre Cat.
+								hintCounter = 569;
+								hintEnd = 572;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:	// Return to Froki.
+								hintCounter = 572;
+								hintEnd = 573;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE9:	// Defeat the Guardian Troll.
+								hintCounter = 573;
+								hintEnd = 579;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE10:	// Return to Froki.
+								hintCounter = 579;
+								hintEnd = 581;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE11: // Laid to Rest.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 8;
+							startSteps = 172;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// Talk to the Jarl.
+								hintCounter = 581;
+								hintEnd = 582;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:	// Investigate the burned house.
+								hintCounter = 582;
+								hintEnd = 584;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:// Find Helgi after dark.
+								hintCounter = 584;
+								hintEnd = 588;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:	// Ask Thonnir about Laelette.
+								hintCounter = 588;
+								hintEnd = 589;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:	// Investigate Alva's house.
+								hintCounter = 589;
+								hintEnd = 595;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:	// Show Alva's Journal to the Jarl.
+								hintCounter = 595;
+								hintEnd = 596;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:		// Kill the master vampire.
+								hintCounter = 596;
+								hintEnd = 604;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:	// Return to Morthal's Jarl.
+								hintCounter = 604;
+								hintEnd = 606;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE12: // Lights Out!
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 7;
+							startSteps = 180;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// Talk to the Jarl.
+								hintCounter = 606;
+								hintEnd = 609;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:		// Talk to the Jarl.
+								hintCounter = 609;
+								hintEnd = 611;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:		// Talk to the Jarl.
+								hintCounter = 611;
+								hintEnd = 616;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:		// Talk to the Jarl.
+								hintCounter = 616;
+								hintEnd = 618;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:		// Talk to the Jarl.
+								hintCounter = 618;
+								hintEnd = 620;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:		// Talk to the Jarl.
+								hintCounter = 620;
+								hintEnd = 623;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:		// Talk to the Jarl.
+								hintCounter = 623;
+								hintEnd = 629;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE13: // The Man Who Cried Wolf.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 2;
+							startSteps = 187;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:			// Clear out Wolfskull Cave.
+								hintCounter = 629;
+								hintEnd = 638;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:		// Speak to Falk Firebeard.
+								hintCounter = 638;
+								hintEnd = 642;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE14: // Missing in Action.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 9;
+							startSteps = 189;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:			// Meet Fralia in her home.
+								hintCounter = 642;
+								hintEnd = 643;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:			// Clear out Wolfskull Cave.
+								hintCounter = 643;
+								hintEnd = 647;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:			// Clear out Wolfskull Cave.
+								hintCounter = 647;
+								hintEnd = 650;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:			// Clear out Wolfskull Cave.
+								hintCounter = 650;
+								hintEnd = 653;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:			// Clear out Wolfskull Cave.
+								hintCounter = 653;
+								hintEnd = 655;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:			// Clear out Wolfskull Cave.
+								hintCounter = 655;
+								hintEnd = 663;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:			// Clear out Wolfskull Cave.
+								hintCounter = 663;
+								hintEnd = 670;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+							case MENUCHOICE8:			// Clear out Wolfskull Cave.
+								hintCounter = 670;
+								hintEnd = 671;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+							case MENUCHOICE9:			// Clear out Wolfskull Cave.
+								hintCounter = 671;
+								hintEnd = 672;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE15: // No One Escapes Cidhna Mine.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 12;
+							startSteps = 198;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// Ask a prisoner about Madanach.
+								hintCounter = 672;
+								hintEnd = 674;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:			// Get past Borkul the Beast.
+								hintCounter = 674;
+								hintEnd = 679;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:			// Talk to Madanach.
+								hintCounter = 679;
+								hintEnd = 681;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:			// Hear Braig's story.
+								hintCounter = 681;
+								hintEnd = 683;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:				// Return to Madanach.
+								hintCounter = 683;
+								hintEnd = 684;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:			// Kill Grisvar the Unlucky.
+								hintCounter = 684;
+								hintEnd = 689;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:		// Return to Madanach.
+								hintCounter = 689;
+								hintEnd = 690;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:			// Follow Madanach.
+								hintCounter = 690;
+								hintEnd = 697;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+							case MENUCHOICE9:			// Kill Madanach.
+								hintCounter = 697;
+								hintEnd = 699;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE10:				// Search Madanach's body.
+								hintCounter = 699;
+								hintEnd = 700;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE11:			// Read Madanach's note.
+								hintCounter = 700;
+								hintEnd = 701;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+							case MENUCHOICE12:			// Escape Cidhna Mine.
+								hintCounter = 701;
+								hintEnd = 709;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE16: // Promises to Keep.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 5;
+							startSteps = 210;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// Speak to Sibbi Black - Briar.
+								hintCounter = 709;
+								hintEnd = 713;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:			// Speak to Sibbi Black - Briar.
+								hintCounter = 713;
+								hintEnd = 718;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:			// (Optional)Steal the Lodge Stash.
+								hintCounter = 718;
+								hintEnd = 719;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:		// Steal Frost.
+								hintCounter = 719;
+								hintEnd = 721;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:			// Return to Louis Letrush.
+								hintCounter = 721;
+								hintEnd = 727;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE17: // Repairing the Phial.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 5;
+							startSteps = 215;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:			// Return to Louis Letrush.
+								hintCounter = 727;
+								hintEnd = 728;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:			// Return to Louis Letrush.
+								hintCounter = 728;
+								hintEnd = 730;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:			// Return to Louis Letrush.
+								hintCounter = 730;
+								hintEnd = 733;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:			// Return to Louis Letrush.
+								hintCounter = 733;
+								hintEnd = 736;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:			// Return to Louis Letrush.
+								hintCounter = 736;
+								hintEnd = 741;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE18: // Rise in the East.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 10;
+							startSteps = 220;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:			// Steal Suvaris Atheron's logbook.
+								hintCounter = 741;
+								hintEnd = 744;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:			// Give the logbook to Orthus.
+								hintCounter = 744;
+								hintEnd = 745;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:			// Talk to Stig Salt - Plank.
+								hintCounter = 745;
+								hintEnd = 748;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:			// Report back to Orthus.
+								hintCounter = 748;
+								hintEnd = 750;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:			// Depart for Japhet's Folly.
+								hintCounter = 750;
+								hintEnd = 752;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:			// Talk to Adelaisa.
+								hintCounter = 752;
+								hintEnd = 753;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:			// Kill Haldyn.
+								hintCounter = 753;
+								hintEnd = 760;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE8:		// Report back to Adelaisa.
+								hintCounter = 760;
+								hintEnd = 763;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE9:			// Speak to Adelaisa to return.
+								hintCounter = 763;
+								hintEnd = 764;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE10:			// Speak to Orthus.
+								hintCounter = 764;
+								hintEnd = 765;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE19: // Rising at Dawn.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 7;
+							startSteps = 230;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// How can I become a vampire ?
+								hintCounter = 765;
+								hintEnd = 769;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE2:			// How do the stages of vampirism work ?
+								hintCounter = 769;
+								hintEnd = 773;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:		// Speak to Falion.
+								hintCounter = 773;
+								hintEnd = 775;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:		// Bring a filled Black Soul Gem to Morthal.
+								hintCounter = 775;
+								hintEnd = 781;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:				// Meet Falion at dawn.
+								hintCounter = 781;
+								hintEnd = 783;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE6:			// Speak to Falion.
+								hintCounter = 783;
+								hintEnd = 784;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE7:		// Wait for Falion to complete the ritual.
+								hintCounter = 784;
+								hintEnd = 785;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE20: // Unfathomable Depths.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 1;
+							startSteps = 237;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// Wait for Falion to complete the ritual.
+								hintCounter = 785;
+								hintEnd = 789;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
 							}
 							break;
 						case MENUCHOICE21: // The White Phial.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 3;
+							startSteps = 238;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// Wait for Falion to complete the ritual.
+								hintCounter = 789;
+								hintEnd = 799;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
+							case MENUCHOICE2:		// Wait for Falion to complete the ritual.
+								hintCounter = 799;
+								hintEnd = 802;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:		// Wait for Falion to complete the ritual.
+								hintCounter = 802;
+								hintEnd = 803;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+
 							}
 							break;
 						case MENUCHOICE22: // The Wolf Queen Awakened.
 							// Set the amount of steps, then give the userQuestChoice, STEPS, questVector, and stepVector to the steps function.
-							STEPS = 0;
-							startSteps = 0;
-							stepChoices(userQuestChoice, STEPS, startSteps, questVector, stepVector);
+							STEPS = 5;
+							startSteps = 241;
+							stepChoices(userQuestChoice + 19, STEPS, startSteps, questVector, stepVector);
 
 							cin >> userStepChoice; // Set user's input to userStepChoice.
 							// Switch statement to take the user input and print the appropriate hints.
 							switch (userStepChoice)
 							{
-							case MENUCHOICE1:
-								// Set the starting hint index, the ending hint index, and call the hint function with all the variables needed.
+							case MENUCHOICE1:		// Speak to Styrr.
+								hintCounter = 803;
+								hintEnd = 805;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
 								break;
+							case MENUCHOICE2:		// Defeat Potema.
+								hintCounter = 805;
+								hintEnd = 809;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE3:		// Retrieve Potema's remains.
+								hintCounter = 809;
+								hintEnd = 812;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE4:		// Give Potema's remains to Styrr.
+								hintCounter = 812;
+								hintEnd = 816;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+							case MENUCHOICE5:		// Return to Falk Firebeard.
+								hintCounter = 816;
+								hintEnd = 816;
+								hintChoices(hintCounter, hintEnd, userStepChoice + startSteps, stepVector, hintVector);
+								break;
+
 							}
 							break;
 						}
@@ -1969,7 +2676,7 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 
 	// Hints.
 	// Retrieve Nettlebane.
-	hintVector[324] = "";
+	hintVector[324] = "hint 1 step 1";
 	hintVector[325] = "";
 	hintVector[326] = "";
 	hintVector[327] = "";
@@ -2286,7 +2993,7 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	hintVector[502] = "";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	// The Golden Claw - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// QUEST: The Golden Claw - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
 	stepVector[148] = "No Steps - Select this for hints.";
 
@@ -2334,16 +3041,16 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	hintVector[527] = "";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	// In My Time of Need - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// QUEST: In My Time of Need - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
 	stepVector[154] = "Find the Redguard woman.";
-	stepVector[154] = "Speak with Saadia or Inform the Alik'r of Saadia's location.";
-	stepVector[154] = "Talk to the Alik'r prisoner or Inform the Alik'r of Saadia's location.";
-	stepVector[154] = "Kill Kematu.";
-	stepVector[154] = "Kill Kematu or talk to him.";
-	stepVector[154] = "Return to Saadia.";
-	stepVector[154] = "Lead Saadia to the Whiterun Stables.";
-	stepVector[154] = "Speak with Saadia.";
+	stepVector[155] = "Speak with Saadia or Inform the Alik'r of Saadia's location.";
+	stepVector[156] = "Talk to the Alik'r prisoner or Inform the Alik'r of Saadia's location.";
+	stepVector[157] = "Kill Kematu.";
+	stepVector[158] = "Kill Kematu or talk to him.";
+	stepVector[159] = "Return to Saadia.";
+	stepVector[160] = "Lead Saadia to the Whiterun Stables.";
+	stepVector[161] = "Speak with Saadia.";
 
 	// Hints.
 	// Find the Redguard woman.
@@ -2384,18 +3091,18 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	hintVector[555] = "";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	// Kyne's Sacred Trials  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// QUEST: Kyne's Sacred Trials  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[155] = "Defeat the Guardian Mudcrab.";
-	stepVector[156] = "Defeat the Guardian Skeever.";
-	stepVector[157] = "Defeat the Guardian Wolf.";
-	stepVector[158] = "Return to Froki.";
-	stepVector[159] = "Defeat the Guardian Bear.";
-	stepVector[160] = "Defeat the Guardian Mammoth.";
-	stepVector[161] = "Defeat the Guardian Sabre Cat.";
-	stepVector[162] = "Return to Froki.";
-	stepVector[163] = "Defeat the Guardian Troll.";
-	stepVector[164] = "Return to Froki.";
+	stepVector[162] = "Defeat the Guardian Mudcrab.";
+	stepVector[163] = "Defeat the Guardian Skeever.";
+	stepVector[164] = "Defeat the Guardian Wolf.";
+	stepVector[165] = "Return to Froki.";
+	stepVector[166] = "Defeat the Guardian Bear.";
+	stepVector[167] = "Defeat the Guardian Mammoth.";
+	stepVector[168] = "Defeat the Guardian Sabre Cat.";
+	stepVector[169] = "Return to Froki.";
+	stepVector[170] = "Defeat the Guardian Troll.";
+	stepVector[171] = "Return to Froki.";
 
 	// Hints. 
 	// Defeat the Guardian Mudcrab.
@@ -2435,16 +3142,16 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	hintVector[580] = "";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	// Laid to Rest - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// QUEST: Laid to Rest - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[165] = "Talk to the Jarl.";
-	stepVector[166] = "Investigate the burned house.";
-	stepVector[167] = "Find Helgi after dark.";
-	stepVector[168] = "Ask Thonnir about Laelette.";
-	stepVector[169] = "Investigate Alva's house.";
-	stepVector[170] = "Show Alva's Journal to the Jarl.";
-	stepVector[171] = "Kill the master vampire.";
-	stepVector[172] = "Return to Morthal's Jarl.";
+	stepVector[172] = "Talk to the Jarl.";
+	stepVector[173] = "Investigate the burned house.";
+	stepVector[174] = "Find Helgi after dark.";
+	stepVector[175] = "Ask Thonnir about Laelette.";
+	stepVector[176] = "Investigate Alva's house.";
+	stepVector[177] = "Show Alva's Journal to the Jarl.";
+	stepVector[178] = "Kill the master vampire.";
+	stepVector[179] = "Return to Morthal's Jarl.";
 
 	// Hints. 
 	// Talk to the Jarl.
@@ -2482,15 +3189,15 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	hintVector[605] = "";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	// Lights Out! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// QUEST: Lights Out! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[173] = "Put out the fire in the Solitude Lighthouse.";
-	stepVector[174] = "Return to Jaree - Ra.";
-	stepVector[175] = "Find Deeja at the Wreck of the Icerunner.";
-	stepVector[176] = "Defeat Deeja.";
-	stepVector[177] = "Find out where Jaree - Ra's bandits took the loot.";
-	stepVector[178] = "Travel to Broken Oar Grotto.";
-	stepVector[179] = "Defeat Jaree - Ra.";
+	stepVector[180] = "Put out the fire in the Solitude Lighthouse.";
+	stepVector[181] = "Return to Jaree - Ra.";
+	stepVector[182] = "Find Deeja at the Wreck of the Icerunner.";
+	stepVector[183] = "Defeat Deeja.";
+	stepVector[184] = "Find out where Jaree - Ra's bandits took the loot.";
+	stepVector[185] = "Travel to Broken Oar Grotto.";
+	stepVector[186] = "Defeat Jaree - Ra.";
 
 	// Hints. 
 	// Put out the fire in the Solitude Lighthouse.
@@ -2525,10 +3232,10 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	hintVector[628] = "";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	// The Man Who Cried Wolf - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// QUEST: The Man Who Cried Wolf - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[180] = "";
-	stepVector[181] = "";
+	stepVector[187] = "";
+	stepVector[188] = "";
 
 	// Hints. 
 	// Clear out Wolfskull Cave.
@@ -2550,15 +3257,15 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	
 	// Missing in Action - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[182] = "Meet Fralia in her home.";
-	stepVector[183] = "Find evidence of Thorald's fate.";
-	stepVector[184] = "Deliver proof to Avulstein.";
-	stepVector[185] = "Find a way to release Thorald from Thalmor custody.";
-	stepVector[186] = "Meet Avulstein at Northwatch Keep.";
-	stepVector[187] = "Rescue Thorald from Northwatch Keep.";
-	stepVector[188] = "Lead Thorald to safety.";
-	stepVector[189] = "Speak to Thorald Gray-Mane.";
-	stepVector[190] = "Return to Fralia Gray-Mane.";
+	stepVector[189] = "Meet Fralia in her home.";
+	stepVector[190] = "Find evidence of Thorald's fate.";
+	stepVector[191] = "Deliver proof to Avulstein.";
+	stepVector[192] = "Find a way to release Thorald from Thalmor custody.";
+	stepVector[193] = "Meet Avulstein at Northwatch Keep.";
+	stepVector[194] = "Rescue Thorald from Northwatch Keep.";
+	stepVector[195] = "Lead Thorald to safety.";
+	stepVector[196] = "Speak to Thorald Gray-Mane.";
+	stepVector[197] = "Return to Fralia Gray-Mane.";
 
 	// Hints.
 	// Meet Fralia in her home.
@@ -2584,309 +3291,309 @@ void createGame(Game gameArray[1], vector<string> categoryNameVector, vector<Que
 	hintVector[657] = "There are a lot of well-armed guards, and your group can be very easily overwhelmed. Try to lead any guard who comes after you away from the keep so they won't all get after you at once.";
 	hintVector[658] = "At least Avulstein is unkillable, so he'll keep on being helpful -- when he's not temporarily disabled, anyway. After all of the guards are killed, enter the keep through its unlocked door.";
 	hintVector[659] = "Crouch down and sneak down the steps in the first room so you can get the drop on the guard and mage in the second room, then go through a wooden door and sneak over to where you can ambush an archer who's at the bottom of some more steps.";
-	hintVector[700] = "Sneak down the steps and try to sneak-attack the two guards in the next room. On past that, you'll find two more guards and a mage in a large two-floor room. (Note that the mage starts behind a door on the lower floor.)";
-	hintVector[701] = "Use the passage on the upper floor of that room to move on to an area with a seated guard on the right and the Northwatch interrogator in a side room on the left. Try to sneak-attack both of them, then follow Avulstein as he walks up to Thorald.";
-	hintVector[702] = "After he talks to Thorald, do so yourself to get the next objective.";
+	hintVector[660] = "Sneak down the steps and try to sneak-attack the two guards in the next room. On past that, you'll find two more guards and a mage in a large two-floor room. (Note that the mage starts behind a door on the lower floor.)";
+	hintVector[661] = "Use the passage on the upper floor of that room to move on to an area with a seated guard on the right and the Northwatch interrogator in a side room on the left. Try to sneak-attack both of them, then follow Avulstein as he walks up to Thorald.";
+	hintVector[662] = "After he talks to Thorald, do so yourself to get the next objective.";
 	// Lead Thorald to safety.
-	hintVector[703] = "Wait for Thorald to free himself from his shackles and pick up a nearby weapon, then lead him out of the keep.";
-	hintVector[704] = "You could retrace your steps and leave the keep the same way you entered it, but there is a shortcut exit available if you don't mind fighting two more guards.";
-	hintVector[705] = "Leave the interrogator's room and go across to where there was a seated guard earlier.";
-	hintVector[706] = "Open the nearby door, then sneak-attack the two guards in the area beyond. (Or sneak up to where you can use the two levers on the left to release some prisoners as a distraction.)";
-	hintVector[707] = "After they're dead, go past them to find a locked door that leads outside.";
-	hintVector[708] = "If you can't pick the lock, go back and loot the interrogator's body to get the key.";
-	hintVector[709] = "You'll get the next objective when you exit the keep.";
+	hintVector[663] = "Wait for Thorald to free himself from his shackles and pick up a nearby weapon, then lead him out of the keep.";
+	hintVector[664] = "You could retrace your steps and leave the keep the same way you entered it, but there is a shortcut exit available if you don't mind fighting two more guards.";
+	hintVector[665] = "Leave the interrogator's room and go across to where there was a seated guard earlier.";
+	hintVector[666] = "Open the nearby door, then sneak-attack the two guards in the area beyond. (Or sneak up to where you can use the two levers on the left to release some prisoners as a distraction.)";
+	hintVector[667] = "After they're dead, go past them to find a locked door that leads outside.";
+	hintVector[668] = "If you can't pick the lock, go back and loot the interrogator's body to get the key.";
+	hintVector[669] = "You'll get the next objective when you exit the keep.";
 	// Speak to Thorald Gray-Mane.
-	hintVector[710] = "Talk to Thorald to get the next objective.";
+	hintVector[670] = "Talk to Thorald to get the next objective.";
 	// Return to Fralia Gray-Mane.
-	hintVector[711] = "Return to Whiterun and follow the quest arrow to Fralia, then tell her that Thorald is safe to finish the quest and get a random enchanted steel weapon.";
+	hintVector[671] = "Return to Whiterun and follow the quest arrow to Fralia, then tell her that Thorald is safe to finish the quest and get a random enchanted steel weapon.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	
 	// No One Escapes Cidhna Mine - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[191] = "Ask a prisoner about Madanach.";
-	stepVector[192] = "Get past Borkul the Beast.";
-	stepVector[193] = "Talk to Madanach.";
-	stepVector[194] = "Hear Braig's story.";
-	stepVector[195] = " Return to Madanach.";
-	stepVector[196] = "Kill Grisvar the Unlucky.";
-	stepVector[197] = " Return to Madanach.";
-	stepVector[198] = "Follow Madanach.";
-	stepVector[199] = "Kill Madanach.";
-	stepVector[200] = "Search Madanach's body.";
-	stepVector[201] = "Read Madanach's note.";
-	stepVector[202] = "Escape Cidhna Mine.";
+	stepVector[198] = "Ask a prisoner about Madanach.";
+	stepVector[199] = "Get past Borkul the Beast.";
+	stepVector[200] = "Talk to Madanach.";
+	stepVector[201] = "Hear Braig's story.";
+	stepVector[202] = " Return to Madanach.";
+	stepVector[203] = "Kill Grisvar the Unlucky.";
+	stepVector[204] = " Return to Madanach.";
+	stepVector[205] = "Follow Madanach.";
+	stepVector[206] = "Kill Madanach.";
+	stepVector[207] = "Search Madanach's body.";
+	stepVector[208] = "Read Madanach's note.";
+	stepVector[209] = "Escape Cidhna Mine.";
 
 	// Hints.
 	// Ask a prisoner about Madanach.
-	hintVector[712] = "After talking to the orc guard, leave your cell and go down to where a guy named Uraccen is sitting by a fire.";
-	hintVector[713] = "Ask him where Madanach is to get the next objective.";
+	hintVector[672] = "After talking to the orc guard, leave your cell and go down to where a guy named Uraccen is sitting by a fire.";
+	hintVector[673] = "Ask him where Madanach is to get the next objective.";
 	// Get past Borkul the Beast.
-	hintVector[714] = "You'll find Borkul next to a locked gate nearby.";
-	hintVector[715] = "Talk to Borkul about seeing Madanach to learn that he wants you to get him a shiv.";
-	hintVector[716] = "First, try using the persuade option. If that fails, you might want to try brawling with him.";
-	hintVector[717] = "Another option is to pickpocket the key from him. For some reason, he won't pay any attention when you open the gate with the key after pickpocketing it.";
-	hintVector[718] = "The only other option is to ask him about the shiv he wants, then go get it for him.";
+	hintVector[674] = "You'll find Borkul next to a locked gate nearby.";
+	hintVector[675] = "Talk to Borkul about seeing Madanach to learn that he wants you to get him a shiv.";
+	hintVector[676] = "First, try using the persuade option. If that fails, you might want to try brawling with him.";
+	hintVector[677] = "Another option is to pickpocket the key from him. For some reason, he won't pay any attention when you open the gate with the key after pickpocketing it.";
+	hintVector[678] = "The only other option is to ask him about the shiv he wants, then go get it for him.";
 	// Talk to Madanach.
-	hintVector[719] = "Go through Borkul's gate and down the tunnel to find Madanach sitting at a table and writing.";
-	hintVector[720] = "Talk to him, choosing whichever dialogue options you want, until you get the next objective.";
+	hintVector[679] = "Go through Borkul's gate and down the tunnel to find Madanach sitting at a table and writing.";
+	hintVector[680] = "Talk to him, choosing whichever dialogue options you want, until you get the next objective.";
 	// Hear Braig's story.
-	hintVector[721] = "Go back the way you came until you reach the central cave area, then return to Grisvar the Unlucky's side tunnel.";
-	hintVector[722] = "Continue along that tunnel until you find Braig, then talk to him to get the next objective.";
+	hintVector[681] = "Go back the way you came until you reach the central cave area, then return to Grisvar the Unlucky's side tunnel.";
+	hintVector[682] = "Continue along that tunnel until you find Braig, then talk to him to get the next objective.";
 	// Return to Madanach.
-	hintVector[723] = "Go back to Madanach's room and talk to him to get the next objective.";
+	hintVector[683] = "Go back to Madanach's room and talk to him to get the next objective.";
 	// Kill Grisvar the Unlucky.
-	hintVector[724] = "If you don't have a shiv, mention that fact to Madanach to get one.";
-	hintVector[725] = "You'll then need to decide whether to aid Madanach in his escape or kill him and use his escape plan for yourself. Aiding him will get you the Old Gods armor set (see the Unique Light Armor List) as a reward, and killing him will get you the Silver-Blood Family Ring (see the Unique Rings List) instead. Also note that aiding him requires much less combat than killing him.";
-	hintVector[726] = "If you want to kill Madanach, sneak-attack him with a shiv to get the \"Kill Madanach\" objective. Otherwise, continue with this objective.";
-	hintVector[727] = "Go find Grisvar the Unlucky is his usual area, then talk to him and say that Madanach says hello.";
-	hintVector[728] = "He'll turn hostile, but you don't have to fight him yourself. Just dodge his blows (if necessary) until the other mine residents finish him off for you.";
+	hintVector[684] = "If you don't have a shiv, mention that fact to Madanach to get one.";
+	hintVector[685] = "You'll then need to decide whether to aid Madanach in his escape or kill him and use his escape plan for yourself. Aiding him will get you the Old Gods armor set (see the Unique Light Armor List) as a reward, and killing him will get you the Silver-Blood Family Ring (see the Unique Rings List) instead. Also note that aiding him requires much less combat than killing him.";
+	hintVector[686] = "If you want to kill Madanach, sneak-attack him with a shiv to get the \"Kill Madanach\" objective. Otherwise, continue with this objective.";
+	hintVector[687] = "Go find Grisvar the Unlucky is his usual area, then talk to him and say that Madanach says hello.";
+	hintVector[688] = "He'll turn hostile, but you don't have to fight him yourself. Just dodge his blows (if necessary) until the other mine residents finish him off for you.";
 	// Return to Madanach.
-	hintVector[729] = "Return to Madanach's room and tell him that Grisvar is dead to get the next objective.";
+	hintVector[689] = "Return to Madanach's room and tell him that Grisvar is dead to get the next objective.";
 	// Follow Madanach.
-	hintVector[730] = "Follow Madanach to the central cave area, then wait until he talks to you.";
-	hintVector[731] = "Follow him some more he goes through a door to the Markarth Ruins area.";
-	hintVector[732] = "Go through the door, then keep following him along, letting him and the others fight the spiders and dwarven machines as you come to them.";
-	hintVector[733] = "You'll eventually reach the exit area, where Madanach will talk to you. After he returns all your confiscated goods and gives you the Old Gods armor set, follow him out the door.";
-	hintVector[734] = "NOTE: Right after Madanach gives you your stuff, you can equip your best armor and weapon, then quickly attack him before he leaves. It'll be *very* tough, but if you can kill him and his followers, you can go outside and talk to Thonar Silver-Blood to get the other quest reward, too. When Madanach dies, you'll jump to the \"Search Madanach's body\" objective.";
-	hintVector[735] = "Wait for the quest to end, after which Madanach and the other escapees will fight their way out of the city. You won't have to do that, and can fast-travel away if you like -- though you might find it more profitable to follow the forsworn along and loot their victims. (Also, return to the Shrine of Talos and loot Eltrys' body to find a good chunk of gold.)";
-	hintVector[736] = "One final note is that the forsworn at the Druadach Redoubt will be friendly to you from now on.";
+	hintVector[690] = "Follow Madanach to the central cave area, then wait until he talks to you.";
+	hintVector[691] = "Follow him some more he goes through a door to the Markarth Ruins area.";
+	hintVector[692] = "Go through the door, then keep following him along, letting him and the others fight the spiders and dwarven machines as you come to them.";
+	hintVector[693] = "You'll eventually reach the exit area, where Madanach will talk to you. After he returns all your confiscated goods and gives you the Old Gods armor set, follow him out the door.";
+	hintVector[694] = "NOTE: Right after Madanach gives you your stuff, you can equip your best armor and weapon, then quickly attack him before he leaves. It'll be *very* tough, but if you can kill him and his followers, you can go outside and talk to Thonar Silver-Blood to get the other quest reward, too. When Madanach dies, you'll jump to the \"Search Madanach's body\" objective.";
+	hintVector[695] = "Wait for the quest to end, after which Madanach and the other escapees will fight their way out of the city. You won't have to do that, and can fast-travel away if you like -- though you might find it more profitable to follow the forsworn along and loot their victims. (Also, return to the Shrine of Talos and loot Eltrys' body to find a good chunk of gold.)";
+	hintVector[696] = "One final note is that the forsworn at the Druadach Redoubt will be friendly to you from now on.";
 	// Kill Madanach.
-	hintVector[737] = "Madanach has quite a bit of health and knows some magic, so he'll be hard to kill if you're not really good with one-handed weapons and magic spells. A high magic resistance would also be helpful.";
-	hintVector[738] = "If you can manage to kill him, you'll get the next objective.";
+	hintVector[697] = "Madanach has quite a bit of health and knows some magic, so he'll be hard to kill if you're not really good with one-handed weapons and magic spells. A high magic resistance would also be helpful.";
+	hintVector[698] = "If you can manage to kill him, you'll get the next objective.";
 	// Search Madanach's body.
-	hintVector[739] = "Loot Madanach's body to get his note and the next objective.";
+	hintVector[699] = "Loot Madanach's body to get his note and the next objective.";
 	// Read Madanach's note.
-	hintVector[740] = "Read the note you got from Madanach in the \"books\" section of your inventory to get the next objective.";
+	hintVector[700] = "Read the note you got from Madanach in the \"books\" section of your inventory to get the next objective.";
 	// Escape Cidhna Mine.
-	hintVector[741] = "Get the key from Madanach's body if you haven't already, then open the locked barred door that's nearby.";
-	hintVector[742] = "Go down the tunnel past it to find a large golden door that leads into the Markarth Ruins area.";
-	hintVector[743] = "Move through the ruins until you go up some stone steps, then look a short way past them for a dwarven-style chest. It may have some items in it that'll be useful in the upcoming combats.";
-	hintVector[744] = "When you start seeing spider webs, look for a couple of frostbite spiders to kill just ahead.";
-	hintVector[745] = "In the area past theirs, you'll encounter two dwarven spheres. They'll be difficult to take down unless you have some strong magic to use against them (and to protect yourself with).";
-	hintVector[746] = "Look on the lower floor of the spheres' area for some potions and a chest to loot, then move on to find the exit doors.";
-	hintVector[747] = "After you exit, Thonar Silver-Blood will talk to you. He'll give you the Silver-Blood Family Ring and all of your confiscated inventory items, after which the quest will end.";
-	hintVector[748] = "TIP: Return to the Shrine of Talos and loot Eltrys' body to find a good chunk of gold.";
+	hintVector[701] = "Get the key from Madanach's body if you haven't already, then open the locked barred door that's nearby.";
+	hintVector[702] = "Go down the tunnel past it to find a large golden door that leads into the Markarth Ruins area.";
+	hintVector[703] = "Move through the ruins until you go up some stone steps, then look a short way past them for a dwarven-style chest. It may have some items in it that'll be useful in the upcoming combats.";
+	hintVector[704] = "When you start seeing spider webs, look for a couple of frostbite spiders to kill just ahead.";
+	hintVector[705] = "In the area past theirs, you'll encounter two dwarven spheres. They'll be difficult to take down unless you have some strong magic to use against them (and to protect yourself with).";
+	hintVector[706] = "Look on the lower floor of the spheres' area for some potions and a chest to loot, then move on to find the exit doors.";
+	hintVector[707] = "After you exit, Thonar Silver-Blood will talk to you. He'll give you the Silver-Blood Family Ring and all of your confiscated inventory items, after which the quest will end.";
+	hintVector[708] = "TIP: Return to the Shrine of Talos and loot Eltrys' body to find a good chunk of gold.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Promises to Keep - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[203] = "Speak to Sibbi Black - Briar.";
-	stepVector[204] = "Steal Frost's Lineage Papers.";
-	stepVector[205] = "(Optional)Steal the Lodge Stash.";
-	stepVector[206] = "Steal Frost.";
-	stepVector[207] = "Return to Louis Letrush.";
+	stepVector[210] = "Speak to Sibbi Black - Briar.";
+	stepVector[211] = "Steal Frost's Lineage Papers.";
+	stepVector[212] = "(Optional)Steal the Lodge Stash.";
+	stepVector[213] = "Steal Frost.";
+	stepVector[214] = "Return to Louis Letrush.";
 
 	// Hints.
 	// Speak to Sibbi Black - Briar.
-	hintVector[749] = "Approach the entrance to Mistveil Keep, then look to the right of it for the entrance to the Riften Jail area.";
-	hintVector[750] = "To get past the locked door in the jail, talk to the seated guard and bribe him or pass a persuade check, or quicksave and try pickpocketing his jail key until you succeed.";
-	hintVector[751] = "Past the door, go straight down to the wooden railing, then go left to find Sibbi Black-Briar's cell.";
-	hintVector[752] = "Talk to him about Letrush sending you, then try to pass the persuade dialogue option that comes up. You don't have to, but it'll get you an optional objective and the key to a strong box.";
-	// Steal Frost's Lineage Papers.
-	hintVector[753] = "You now need to go to the Black-Briar Lodge. See the Riften section of the World Map Exploration Guide if you need directions.";
-	hintVector[754] = "There are two mercenary guards near the lodge that you'll need to sneak past or kill off. Since the keys that they have will come in handy, you'll probably prefer to kill them. (Note that you won't get a bounty for it.)";
-	hintVector[755] = "Get one of the mercs' keys, then go up to the lodge's front door. Crouch down, then use the door to go inside.";
-	hintVector[756] = "Turn right and sneak down the stairs to the basement, then look next to the bottom of the stairs for a strong box on a crate. It's the one Sibbi gave you the key to if you passed the persuade option when talking to him. If you didn't, you'll have to pick a master-level lock if you want to loot it.";
-	hintVector[757] = "Go around to the main part of the basement to find Frost's identity papers on an end table. Take them to get the \"Steal Frost\" objective.";
+	hintVector[709] = "Approach the entrance to Mistveil Keep, then look to the right of it for the entrance to the Riften Jail area.";
+	hintVector[710] = "To get past the locked door in the jail, talk to the seated guard and bribe him or pass a persuade check, or quicksave and try pickpocketing his jail key until you succeed.";
+	hintVector[711] = "Past the door, go straight down to the wooden railing, then go left to find Sibbi Black-Briar's cell.";
+	hintVector[712] = "Talk to him about Letrush sending you, then try to pass the persuade dialogue option that comes up. You don't have to, but it'll get you an optional objective and the key to a strong box.";
+	// Speak to Sibbi Black - Briar.
+	hintVector[713] = "You now need to go to the Black-Briar Lodge. See the Riften section of the World Map Exploration Guide if you need directions.";
+	hintVector[714] = "There are two mercenary guards near the lodge that you'll need to sneak past or kill off. Since the keys that they have will come in handy, you'll probably prefer to kill them. (Note that you won't get a bounty for it.)";
+	hintVector[715] = "Get one of the mercs' keys, then go up to the lodge's front door. Crouch down, then use the door to go inside.";
+	hintVector[716] = "Turn right and sneak down the stairs to the basement, then look next to the bottom of the stairs for a strong box on a crate. It's the one Sibbi gave you the key to if you passed the persuade option when talking to him. If you didn't, you'll have to pick a master-level lock if you want to loot it.";
+	hintVector[717] = "Go around to the main part of the basement to find Frost's identity papers on an end table. Take them to get the \"Steal Frost\" objective.";
 	// (Optional)Steal the Lodge Stash.
-	hintVector[758] = "The lodge's stash is in a strong box in the basement. See the \"Steal Frost's Lineage Papers\" objective hints for details on how to get to it, then loot it to finish this objective.";
+	hintVector[718] = "The lodge's stash is in a strong box in the basement. See the \"Steal Frost's Lineage Papers\" objective hints for details on how to get to it, then loot it to finish this objective.";
 	// Steal Frost.
-	hintVector[759] = "Sneak back out the way you came in, then go over to the nearby stables and look in or near them for the horse named Frost.";
-	hintVector[760] = "Mount Frost to get the next objective.";
+	hintVector[719] = "Sneak back out the way you came in, then go over to the nearby stables and look in or near them for the horse named Frost.";
+	hintVector[720] = "Mount Frost to get the next objective.";
 	// Return to Louis Letrush.
-	hintVector[761] = "Ride Frost over to where the quest arrow marks Letrush's current location. (Note that it's near Fallowstone Cave, so fast-travel there if you've already discovered it.)";
-	hintVector[762] = "Letrush may be under attack by wolves or spiders when you arrive. If so, dismount and help him kill them.";
-	hintVector[763] = "Talk to him after the combat is over. If he says he doesn't see Frost, then get back on Frost and ride him over to where he's right next to Letrush, then dismount and talk to Letrush again.";
-	hintVector[764] = "You'll have three dialogue options to choose from. The first one gets you some gold, after which Letrush runs off without Frost for some reason. That doesn't mean Frost is yours, though -- he'll still count as stolen, and he won't follow you around when you fast-travel.";
-	hintVector[765] = "If you want to make Frost your horse, you'll have to pass a persuade check when you talk to Letrush, or use the third dialogue option. It'll supposedly start a combat with Letrush, but due to a glitch, he may just run away without turning hostile.";
-	hintVector[766] = "The advantage to passing the persuade option is that you'll get the horse and the gold (and some Speech skill practice), but the disadvantage is that a thug sent by Letrush will attack you in a random world encounter sometime later on. The advantage of using the third option is that you don't have to pass a persuade check, but the disadvantage is that you don't get the gold (unless you attack and kill Letrush, or pickpocket him).";
+	hintVector[721] = "Ride Frost over to where the quest arrow marks Letrush's current location. (Note that it's near Fallowstone Cave, so fast-travel there if you've already discovered it.)";
+	hintVector[722] = "Letrush may be under attack by wolves or spiders when you arrive. If so, dismount and help him kill them.";
+	hintVector[723] = "Talk to him after the combat is over. If he says he doesn't see Frost, then get back on Frost and ride him over to where he's right next to Letrush, then dismount and talk to Letrush again.";
+	hintVector[724] = "You'll have three dialogue options to choose from. The first one gets you some gold, after which Letrush runs off without Frost for some reason. That doesn't mean Frost is yours, though -- he'll still count as stolen, and he won't follow you around when you fast-travel.";
+	hintVector[725] = "If you want to make Frost your horse, you'll have to pass a persuade check when you talk to Letrush, or use the third dialogue option. It'll supposedly start a combat with Letrush, but due to a glitch, he may just run away without turning hostile.";
+	hintVector[726] = "The advantage to passing the persuade option is that you'll get the horse and the gold (and some Speech skill practice), but the disadvantage is that a thug sent by Letrush will attack you in a random world encounter sometime later on. The advantage of using the third option is that you don't have to pass a persuade check, but the disadvantage is that you don't get the gold (unless you attack and kill Letrush, or pickpocket him).";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Repairing the Phial - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[208] = "Speak to Quintus Navale.";
-	stepVector[209] = "Retrieve the Unmelting Snow.";
-	stepVector[210] = "Find some Mammoth Tusk Powder.";
-	stepVector[211] = "Take a Forsworn Heart.";
-	stepVector[212] = "Return to Quintus Navale.";
+	stepVector[215] = "Speak to Quintus Navale.";
+	stepVector[216] = "Retrieve the Unmelting Snow.";
+	stepVector[217] = "Find some Mammoth Tusk Powder.";
+	stepVector[218] = "Take a Forsworn Heart.";
+	stepVector[219] = "Return to Quintus Navale.";
 
 	// Hints.
 	// Speak to Quintus Navale.
-	hintVector[767] = "Return to the White Phial shop in Windhelm and talk to Quintus about receiving his letter to get the next three objectives.";
+	hintVector[727] = "Return to the White Phial shop in Windhelm and talk to Quintus about receiving his letter to get the next three objectives.";
 	// Retrieve the Unmelting Snow.
-	hintVector[768] = "Return to Paarthurnax's Throat of the World location, then go over to the damaged Word Wall that he's perched on.";
-	hintVector[769] = "Go up the slope that's directly south of that to find the quest-arrow-marked \"Unmelting Snowbank,\" then activate it to take some unmelting snow.";
+	hintVector[728] = "Return to Paarthurnax's Throat of the World location, then go over to the damaged Word Wall that he's perched on.";
+	hintVector[729] = "Go up the slope that's directly south of that to find the quest-arrow-marked \"Unmelting Snowbank,\" then activate it to take some unmelting snow.";
 	// Find some Mammoth Tusk Powder.
-	hintVector[770] = "Note that this isn't the same as the powdered mammoth tusk ingredient item, so it won't do.";
-	hintVector[771] = "A quest arrow marks the giant camp called Stonehill Bluff, so go there. See the Whiterun section of the World Map Exploration Guide if you need directions.";
-	hintVector[772] = "Follow the quest arrow to a large stone bowl with the mammoth tusk powder in it. If you're careful, you'll be able to get the powder and leave without antagonizing any of the giants.";
+	hintVector[730] = "Note that this isn't the same as the powdered mammoth tusk ingredient item, so it won't do.";
+	hintVector[731] = "A quest arrow marks the giant camp called Stonehill Bluff, so go there. See the Whiterun section of the World Map Exploration Guide if you need directions.";
+	hintVector[732] = "Follow the quest arrow to a large stone bowl with the mammoth tusk powder in it. If you're careful, you'll be able to get the powder and leave without antagonizing any of the giants.";
 	// Take a Forsworn Heart.
-	hintVector[773] = "Any briar heart ingredient item will do, though they're fairly rare, and it may be awhile before you find one randomly in an alchemy store's inventory.";
-	hintVector[774] = "The surest way to get a briar heart is to kill a forsworn briarheart and loot his body.";
-	hintVector[775] = "You can find forsworn briarhearts in several different areas, including at Bard's Leap Summit (see the Falkreath section of the World Map Exploration Guide), in Broken Tower Redoubt (\"The Heart of Dibella\" side quest), and at Red Eagle Redoubt (\"Find Red Eagle's sword\" Markarth miscellaneous quest).";
+	hintVector[733] = "Any briar heart ingredient item will do, though they're fairly rare, and it may be awhile before you find one randomly in an alchemy store's inventory.";
+	hintVector[734] = "The surest way to get a briar heart is to kill a forsworn briarheart and loot his body.";
+	hintVector[735] = "You can find forsworn briarhearts in several different areas, including at Bard's Leap Summit (see the Falkreath section of the World Map Exploration Guide), in Broken Tower Redoubt (\"The Heart of Dibella\" side quest), and at Red Eagle Redoubt (\"Find Red Eagle's sword\" Markarth miscellaneous quest).";
 	// Return to Quintus Navale.
-	hintVector[776] = "Return to the White Phial and tell Quintus that you have the materials he requested.";
-	hintVector[777] = "Follow him along until he talks to you, at which time he'll ask you how you want the White Phial attuned.";
-	hintVector[778] = "You'll have six choices. Which one you choose will determine what type of potion will appear in the White Phial once every 24 hours.";
-	hintVector[779] = "The options, in top-to-bottom order, are: Restore Health, Resist Magic, Fortify Stamina, Fortify Magicka, Fortify One-Handed, Fortify Sneak.";
-	hintVector[780] = "You'll find the White Phial in the \"potions\" section of your inventory, and it'll start out full. You can use it to drink its contents, after which it'll be 24 hours before it refills with the same type of potion.";
+	hintVector[736] = "Return to the White Phial and tell Quintus that you have the materials he requested.";
+	hintVector[737] = "Follow him along until he talks to you, at which time he'll ask you how you want the White Phial attuned.";
+	hintVector[738] = "You'll have six choices. Which one you choose will determine what type of potion will appear in the White Phial once every 24 hours.";
+	hintVector[739] = "The options, in top-to-bottom order, are: Restore Health, Resist Magic, Fortify Stamina, Fortify Magicka, Fortify One-Handed, Fortify Sneak.";
+	hintVector[740] = "You'll find the White Phial in the \"potions\" section of your inventory, and it'll start out full. You can use it to drink its contents, after which it'll be 24 hours before it refills with the same type of potion.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Rise in the East - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[213] = "Steal Suvaris Atheron's logbook.";
-	stepVector[214] = "Give the logbook to Orthus.";
-	stepVector[215] = "Talk to Stig Salt - Plank.";
-	stepVector[216] = "Report back to Orthus.";
-	stepVector[217] = "Depart for Japhet's Folly.";
-	stepVector[218] = "Talk to Adelaisa.";
-	stepVector[219] = "Kill Haldyn.";
-	stepVector[220] = "Report back to Adelaisa.";
-	stepVector[221] = "Speak to Adelaisa to return.";
-	stepVector[222] = "Speak to Orthus.";
+	stepVector[220] = "Steal Suvaris Atheron's logbook.";
+	stepVector[221] = "Give the logbook to Orthus.";
+	stepVector[222] = "Talk to Stig Salt - Plank.";
+	stepVector[223] = "Report back to Orthus.";
+	stepVector[224] = "Depart for Japhet's Folly.";
+	stepVector[225] = "Talk to Adelaisa.";
+	stepVector[226] = "Kill Haldyn.";
+	stepVector[227] = "Report back to Adelaisa.";
+	stepVector[228] = "Speak to Adelaisa to return.";
+	stepVector[229] = "Speak to Orthus.";
 
 	// Hints.
 	// Steal Suvaris Atheron's logbook.
-	hintVector[781] = "Leave the East Empire Company building and go next door to the Clan Shatter-Shield Office building.";
-	hintVector[782] = "If you can't pick the lock on the door, find Torbjorn Shatter-Shield and pickpocket his office key. (He'll usually be in the market area or the Clan Shatter-Shield house.)";
-	hintVector[783] = "Go to the back left corner of the Shatter-Shield office to find Atheron's logbook next to a large business ledger. Take the logbook to get the next objective.";
+	hintVector[741] = "Leave the East Empire Company building and go next door to the Clan Shatter-Shield Office building.";
+	hintVector[742] = "If you can't pick the lock on the door, find Torbjorn Shatter-Shield and pickpocket his office key. (He'll usually be in the market area or the Clan Shatter-Shield house.)";
+	hintVector[743] = "Go to the back left corner of the Shatter-Shield office to find Atheron's logbook next to a large business ledger. Take the logbook to get the next objective.";
 	// Give the logbook to Orthus.
-	hintVector[784] = "Return to the East Empire Company building and talk to Orthus about the logbook to get the next objective.";
+	hintVector[744] = "Return to the East Empire Company building and talk to Orthus about the logbook to get the next objective.";
 	// Talk to Stig Salt - Plank.
-	hintVector[785] = "Go to Dawnstar and look for Stig Salt-Plank in the inn.";
-	hintVector[786] = "Instead of talking to him, you could pickpocket his \"Blood Horker Orders\" document to get the next objective.";
-	hintVector[787] = "If you talk to him, you'll have to either bribe him or beat him in a brawl to get the next objective.";
+	hintVector[745] = "Go to Dawnstar and look for Stig Salt-Plank in the inn.";
+	hintVector[746] = "Instead of talking to him, you could pickpocket his \"Blood Horker Orders\" document to get the next objective.";
+	hintVector[747] = "If you talk to him, you'll have to either bribe him or beat him in a brawl to get the next objective.";
 	// Report back to Orthus.
-	hintVector[788] = "Return to Windhelm's East Empire Company building and talk to Orthus.";
-	hintVector[789] = "Then talk to Adelaisa Vendicci to get the next objective.";
+	hintVector[748] = "Return to Windhelm's East Empire Company building and talk to Orthus.";
+	hintVector[749] = "Then talk to Adelaisa Vendicci to get the next objective.";
 	// Depart for Japhet's Folly.
-	hintVector[790] = "Exit the East Empire Company building and look nearby for a quest-arrow-marked mercenary.";
-	hintVector[791] = "When you're ready to go, talk to him and say \"let\'s go.\"";
+	hintVector[750] = "Exit the East Empire Company building and look nearby for a quest-arrow-marked mercenary.";
+	hintVector[751] = "When you're ready to go, talk to him and say \"let\'s go.\"";
 	// Talk to Adelaisa.
-	hintVector[792] = "Find Adelaisa on the deck nearby and talk to her to get the next objective.";
+	hintVector[752] = "Find Adelaisa on the deck nearby and talk to her to get the next objective.";
 	// Kill Haldyn.
-	hintVector[793] = "The ship you're on isn't going anywhere, so jump off of it and head south across the ice floes.";
-	hintVector[794] = "Follow the quest arrow to find the entrance to a sea cave, then go inside.";
-	hintVector[795] = "Move through the water and kill a couple of mudcrabs, then go up the snowy path to reach another mudcrab and a big wall hole that you can go through to find your first Blood Horker pirate.";
-	hintVector[796] = "Go up the stairs and through the door to enter the Japhet's Folly Towers area, then go up the large staircase to find a couple more Blood Horkers (and a swinging gate trap).";
-	hintVector[797] = "Past the stairs, go through a wooden door and down a long passage, then go through the SW doorway and down some stairs if you want some optional combat and loot. The NE doorway leads to some stairs going up, which is the way you need to go.";
-	hintVector[798] = "Past the stairs, sneak through one doorway and over to another one so you can get a sneak attack on Haldyn. He'll mainly use shock damage spells against you, so hopefully you have some shock resistance and/or magic resistance.";
-	hintVector[799] = "When you kill Haldyn, you'll get the next objective.";
+	hintVector[753] = "The ship you're on isn't going anywhere, so jump off of it and head south across the ice floes.";
+	hintVector[754] = "Follow the quest arrow to find the entrance to a sea cave, then go inside.";
+	hintVector[755] = "Move through the water and kill a couple of mudcrabs, then go up the snowy path to reach another mudcrab and a big wall hole that you can go through to find your first Blood Horker pirate.";
+	hintVector[756] = "Go up the stairs and through the door to enter the Japhet's Folly Towers area, then go up the large staircase to find a couple more Blood Horkers (and a swinging gate trap).";
+	hintVector[757] = "Past the stairs, go through a wooden door and down a long passage, then go through the SW doorway and down some stairs if you want some optional combat and loot. The NE doorway leads to some stairs going up, which is the way you need to go.";
+	hintVector[758] = "Past the stairs, sneak through one doorway and over to another one so you can get a sneak attack on Haldyn. He'll mainly use shock damage spells against you, so hopefully you have some shock resistance and/or magic resistance.";
+	hintVector[759] = "When you kill Haldyn, you'll get the next objective.";
 	// Report back to Adelaisa.
-	hintVector[800] = "Get the key from Haldyn's body, then go back down the stairs and along the passage until you find a door leading outside.";
-	hintVector[801] = "Haldyn's key will open it for you, so go through it and start fighting your way east through the outer structures.";
-	hintVector[802] = "Kill off the Blood Horkers who are near Adelaisa, then talk to her to get the next objective.";
+	hintVector[760] = "Get the key from Haldyn's body, then go back down the stairs and along the passage until you find a door leading outside.";
+	hintVector[761] = "Haldyn's key will open it for you, so go through it and start fighting your way east through the outer structures.";
+	hintVector[762] = "Kill off the Blood Horkers who are near Adelaisa, then talk to her to get the next objective.";
 	// Speak to Adelaisa to return.
-	hintVector[803] = "When you're ready to leave Japhet's Folly, talk to Adelaisa and say \"let\'s go.\" (Note that you\'ll be able to fast - travel back here later on.)";
+	hintVector[763] = "When you're ready to leave Japhet's Folly, talk to Adelaisa and say \"let\'s go.\" (Note that you\'ll be able to fast - travel back here later on.)";
 	// Speak to Orthus.
-	hintVector[804] = "You'll be back at the Windhelm docks, so enter the East Empire Company building and talk to Orthus to finish the quest and get some gold. Note that Adelaisa will be a follower from now on.";
+	hintVector[764] = "You'll be back at the Windhelm docks, so enter the East Empire Company building and talk to Orthus to finish the quest and get some gold. Note that Adelaisa will be a follower from now on.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Rising at Dawn - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[223] = "How can I become a vampire ?";
-	stepVector[224] = "How do the stages of vampirism work ?";
-	stepVector[225] = "Speak to Falion.";
-	stepVector[226] = "Bring a filled Black Soul Gem to Morthal.";
-	stepVector[227] = "Meet Falion at dawn.";
-	stepVector[228] = "Speak to Falion.";
-	stepVector[229] = "Wait for Falion to complete the ritual.";
+	stepVector[230] = "How can I become a vampire ?";
+	stepVector[221] = "How do the stages of vampirism work ?";
+	stepVector[232] = "Speak to Falion.";
+	stepVector[233] = "Bring a filled Black Soul Gem to Morthal.";
+	stepVector[234] = "Meet Falion at dawn.";
+	stepVector[235] = "Speak to Falion.";
+	stepVector[236] = "Wait for Falion to complete the ritual.";
 
 	// Hints.
 	// How can I become a vampire ?
-	hintVector[805] = "To start with, let a vampire assault you until you contract the Sanguinare Vampiris disease. (Note that catching that disease won't be possible if you're a werewolf. See the Companions faction quests for more information on that.)";
-	hintVector[806] = "See the \"Locations By Type\" section of the World Map Exploration Guide to find out where all the vampire lairs are, and take along plenty of healing potions so you won't be killed while letting vampires attack you.";
-	hintVector[807] = "Once you catch the vampire disease, kill off any nearby vampires, then refrain from using anything that will cure diseases (including shrines) for three days.";
-	hintVector[808] = "Soon after three days have passed, the screen will turn briefly red, and you'll get a notification that you've become a vampire.";
+	hintVector[765] = "To start with, let a vampire assault you until you contract the Sanguinare Vampiris disease. (Note that catching that disease won't be possible if you're a werewolf. See the Companions faction quests for more information on that.)";
+	hintVector[766] = "See the \"Locations By Type\" section of the World Map Exploration Guide to find out where all the vampire lairs are, and take along plenty of healing potions so you won't be killed while letting vampires attack you.";
+	hintVector[767] = "Once you catch the vampire disease, kill off any nearby vampires, then refrain from using anything that will cure diseases (including shrines) for three days.";
+	hintVector[768] = "Soon after three days have passed, the screen will turn briefly red, and you'll get a notification that you've become a vampire.";
 	// How do the stages of vampirism work ?
-	hintVector[809] = "You start out as a stage 1 vampire, and you'll revert back to stage 1 every time you feed.";
-	hintVector[810] = "To feed, sneak up to a sleeping person. Activate him when you can do so unseen, then choose the \"feed\" option instead of the \"pickpocket\" option.";
-	hintVector[811] = "Every time a day passes without you feeding at all, you'll progress to the next stage of vampirism (unless you're already at stage 4).";
-	hintVector[812] = "People in towns and settlements won't be automatically hostile to you unless you're at stage 4, so you can still talk to them, do merchant business with them, and so on if your current vampirism stage is 3 or less.";
+	hintVector[769] = "You start out as a stage 1 vampire, and you'll revert back to stage 1 every time you feed.";
+	hintVector[770] = "To feed, sneak up to a sleeping person. Activate him when you can do so unseen, then choose the \"feed\" option instead of the \"pickpocket\" option.";
+	hintVector[771] = "Every time a day passes without you feeding at all, you'll progress to the next stage of vampirism (unless you're already at stage 4).";
+	hintVector[772] = "People in towns and settlements won't be automatically hostile to you unless you're at stage 4, so you can still talk to them, do merchant business with them, and so on if your current vampirism stage is 3 or less.";
 	// Speak to Falion.
-	hintVector[813] = "Go to Morthal and follow the quest arrow to Falion. (If he's locked inside his house, you'll need to wait until 8 am or so.)";
-	hintVector[814] = "Talk to him about being an expert in vampirism to get the next objective.";
+	hintVector[773] = "Go to Morthal and follow the quest arrow to Falion. (If he's locked inside his house, you'll need to wait until 8 am or so.)";
+	hintVector[774] = "Talk to him about being an expert in vampirism to get the next objective.";
 	// Bring a filled Black Soul Gem to Morthal.
-	hintVector[815] = "Pre-filled black soul gems are only available as very rare random loot, so you'll probably need to find an empty one and then fill it.";
-	hintVector[816] = "Falion will have an empty black soul gem in his merchant inventory, as will Enthir at the College of Winterhold.";
-	hintVector[817] = "Note that there may be a special dialogue option with Falion that'll let you buy his black soul gem really cheap. If so, use it.";
-	hintVector[818] = "If you'd rather find an empty black soul gem lying around, free for the taking, then you'll need to explore Broken Fang Cave, Hob's Fall Cave, or Fort Snowhawk.";
-	hintVector[819] = "Once you have an empty black soul gem, soul-trap a hostile NPC like a bandit or necromancer in it. See the Enchanting Practice Tips for more about soul-trapping.";
-	hintVector[820] = "Return to Morthal and tell Falion that you have a filled black soul gem to get the next objective.";
+	hintVector[775] = "Pre-filled black soul gems are only available as very rare random loot, so you'll probably need to find an empty one and then fill it.";
+	hintVector[776] = "Falion will have an empty black soul gem in his merchant inventory, as will Enthir at the College of Winterhold.";
+	hintVector[777] = "Note that there may be a special dialogue option with Falion that'll let you buy his black soul gem really cheap. If so, use it.";
+	hintVector[778] = "If you'd rather find an empty black soul gem lying around, free for the taking, then you'll need to explore Broken Fang Cave, Hob's Fall Cave, or Fort Snowhawk.";
+	hintVector[779] = "Once you have an empty black soul gem, soul-trap a hostile NPC like a bandit or necromancer in it. See the Enchanting Practice Tips for more about soul-trapping.";
+	hintVector[780] = "Return to Morthal and tell Falion that you have a filled black soul gem to get the next objective.";
 	// Meet Falion at dawn.
-	hintVector[821] = "Follow the quest arrow to see where you're supposed to meet Falion, then wait if necessary for him to show up (which he'll usually do at around 4 am).";
-	hintVector[822] = "When he arrives, you'll get the next objective.";
+	hintVector[781] = "Follow the quest arrow to see where you're supposed to meet Falion, then wait if necessary for him to show up (which he'll usually do at around 4 am).";
+	hintVector[782] = "When he arrives, you'll get the next objective.";
 	// Speak to Falion.
-	hintVector[823] = "Talk to Falion to get the next objective.";
+	hintVector[783] = "Talk to Falion to get the next objective.";
 	// Wait for Falion to complete the ritual.
-	hintVector[824] = "Just stand and wait until the quest is completed, after which you won't be a vampire anymore. (Though you can become a vampire again the same way you did before.)";
+	hintVector[784] = "Just stand and wait until the quest is completed, after which you won't be a vampire anymore. (Though you can become a vampire again the same way you did before.)";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// Unfathomable Depths - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[230] = "No Steps - Select this for hints.";
+	stepVector[237] = "No Steps - Select this for hints.";
 
 	// Hints.
-	hintVector[825] = "Once you're level 14 or higher, go to Riften, then exit it using the door on its west side. Go along the board walkways until you find an argonian named From-Deepest-Fathoms, then talk to her to get this quest.";
-	hintVector[826] = "See the Riften section of the World Map Exploration Guide if you need help getting to Avanchnzel.";
-	hintVector[827] = "Once there, go up its curving stone ramps to reach a dark cave entrance.";
-	hintVector[828] = "Once there, go up its curving stone ramps to reach a dark cave entrance.";
+	hintVector[785] = "Once you're level 14 or higher, go to Riften, then exit it using the door on its west side. Go along the board walkways until you find an argonian named From-Deepest-Fathoms, then talk to her to get this quest.";
+	hintVector[786] = "See the Riften section of the World Map Exploration Guide if you need help getting to Avanchnzel.";
+	hintVector[787] = "Once there, go up its curving stone ramps to reach a dark cave entrance.";
+	hintVector[788] = "Once there, go up its curving stone ramps to reach a dark cave entrance.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// The White Phial - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[231] = "Retrieve the White Phial.";
-	stepVector[232] = "Bring the Phial to Nurelion.";
-	stepVector[233] = "Speak to Quintus.";
+	stepVector[238] = "Retrieve the White Phial.";
+	stepVector[239] = "Bring the Phial to Nurelion.";
+	stepVector[240] = "Speak to Quintus.";
 
 	// Hints.
 	// Retrieve the White Phial.
-	hintVector[829] = "Travel to the Forsaken Cave and enter it, then fight your way past some animals to reach an iron door.";
-	hintVector[830] = "Move down the passage past the door until you reach the start of a long and winding draugr crypt passage. Proceed through it slowly, watching for traps and taking on the draugr one or two at a time.";
-	hintVector[831] = "At the end of the draugr passage is a door that leads to the Forsaken Crypt area.";
-	hintVector[832] = "Kill the draugr in the first room, then follow the passage along (and kill another draugr) to reach that room's upper walkway.";
-	hintVector[833] = "Cross the room on the walkway and kill the next draugr, then follow the walkway into a room with two more draugr and a large round trap in the middle of the floor.";
-	hintVector[834] = "Go through the door past the trap and across an \"encaged\" bridge, then go down a draugr-infested passage to reach another door.";
-	hintVector[835] = "Quicksave, then open it and time your way through the swinging axe trap. In the room beyond, Curalmil and several lesser draugr will rise up and attack you.";
-	hintVector[836] = "You'll probably want to quickly retreat back past the swinging axe trap and try to take them on a few at a time. Note that Curalmil is the equivalent of a draugr overlord.";
-	hintVector[837] = "Look past Curalmil's sarcophagus for some steps leading up to a treasure chest and a Word Wall, then go down the passage that's under the Word Wall to find an ancient bowl.";
-	hintVector[838] = "Activate it to pour Nurelion's mixture into it, then go past the secret door that opens to find a cracked white phial on a pedestal. Take it to get the next objective.";
+	hintVector[789] = "Travel to the Forsaken Cave and enter it, then fight your way past some animals to reach an iron door.";
+	hintVector[790] = "Move down the passage past the door until you reach the start of a long and winding draugr crypt passage. Proceed through it slowly, watching for traps and taking on the draugr one or two at a time.";
+	hintVector[791] = "At the end of the draugr passage is a door that leads to the Forsaken Crypt area.";
+	hintVector[792] = "Kill the draugr in the first room, then follow the passage along (and kill another draugr) to reach that room's upper walkway.";
+	hintVector[793] = "Cross the room on the walkway and kill the next draugr, then follow the walkway into a room with two more draugr and a large round trap in the middle of the floor.";
+	hintVector[794] = "Go through the door past the trap and across an \"encaged\" bridge, then go down a draugr-infested passage to reach another door.";
+	hintVector[795] = "Quicksave, then open it and time your way through the swinging axe trap. In the room beyond, Curalmil and several lesser draugr will rise up and attack you.";
+	hintVector[796] = "You'll probably want to quickly retreat back past the swinging axe trap and try to take them on a few at a time. Note that Curalmil is the equivalent of a draugr overlord.";
+	hintVector[797] = "Look past Curalmil's sarcophagus for some steps leading up to a treasure chest and a Word Wall, then go down the passage that's under the Word Wall to find an ancient bowl.";
+	hintVector[798] = "Activate it to pour Nurelion's mixture into it, then go past the secret door that opens to find a cracked white phial on a pedestal. Take it to get the next objective.";
 	// Bring the Phial to Nurelion.
-	hintVector[839] = "Go back to Curalmil's room and through the door on its south side to find a door that leads back to the main cave area.";
-	hintVector[840] = "Use the lever that's on the wall to open a secret door, then exit the cave and return to Windhelm.";
-	hintVector[841] = "Talk to Nurelion in his shop to hand over the damaged phial and get 5 gold.";
+	hintVector[799] = "Go back to Curalmil's room and through the door on its south side to find a door that leads back to the main cave area.";
+	hintVector[800] = "Use the lever that's on the wall to open a secret door, then exit the cave and return to Windhelm.";
+	hintVector[801] = "Talk to Nurelion in his shop to hand over the damaged phial and get 5 gold.";
 	// Speak to Quintus.
-	hintVector[842] = "Talk to Quintus Navale, who's also in the shop, to get a lot more gold and finish the quest.";
+	hintVector[802] = "Talk to Quintus Navale, who's also in the shop, to get a lot more gold and finish the quest.";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// The Wolf Queen Awakened - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Steps.
-	stepVector[233] = "Speak to Styrr.";
-	stepVector[233] = "Defeat Potema.";
-	stepVector[233] = "Retrieve Potema's remains.";
-	stepVector[233] = "Give Potema's remains to Styrr.";
-	stepVector[233] = "Return to Falk Firebeard.";
+	stepVector[241] = "Speak to Styrr.";
+	stepVector[242] = "Defeat Potema.";
+	stepVector[243] = "Retrieve Potema's remains.";
+	stepVector[244] = "Give Potema's remains to Styrr.";
+	stepVector[245] = "Return to Falk Firebeard.";
 
 	// Hints.
 	// Speak to Styrr.
-	hintVector[843] = "Exit the palace and go down the street until you come to the Hall of the Dead on your left.";
-	hintVector[844] = "Enter it and talk to Styrr about Potema to get the Turn Undead spell, a key, and the next objective.";
+	hintVector[803] = "Exit the palace and go down the street until you come to the Hall of the Dead on your left.";
+	hintVector[804] = "Enter it and talk to Styrr about Potema to get the Turn Undead spell, a key, and the next objective.";
 	// Defeat Potema.
-	hintVector[845] = "Exit the Hall of the Dead and go NW down the street to the castle courtyard, then turn right and enter the Temple of the Divines.";
-	hintVector[846] = "Go down to the area with all the shrines, then enter the nearby left-side area and go down the steps.";
-	hintVector[847] = "Go through the barred door past the steps, then go down to a hole in the wall that you can move through to enter the Potema's Catacombs area.";
-	hintVector[848] = "You'll need to get through it and two more areas to get the next objective.";
+	hintVector[805] = "Exit the Hall of the Dead and go NW down the street to the castle courtyard, then turn right and enter the Temple of the Divines.";
+	hintVector[806] = "Go down to the area with all the shrines, then enter the nearby left-side area and go down the steps.";
+	hintVector[807] = "Go through the barred door past the steps, then go down to a hole in the wall that you can move through to enter the Potema's Catacombs area.";
+	hintVector[808] = "You'll need to get through it and two more areas to get the next objective.";
 	// Retrieve Potema's remains.
-	hintVector[849] = "Go up to the open door in the back of Potema's chamber to find that she's now taken on a form that can attack you directly.";
-	hintVector[850] = "Take cover to the left or right of the doorway while blasting Potema's remains with fireballs and other ranged spells.";
-	hintVector[851] = "After you kill that manifestation, go up to the throne it was standing next to and take Potema's skull from it. That'll get you the next two objectives.";
+	hintVector[809] = "Go up to the open door in the back of Potema's chamber to find that she's now taken on a form that can attack you directly.";
+	hintVector[810] = "Take cover to the left or right of the doorway while blasting Potema's remains with fireballs and other ranged spells.";
+	hintVector[811] = "After you kill that manifestation, go up to the throne it was standing next to and take Potema's skull from it. That'll get you the next two objectives.";
 	// Give Potema's remains to Styrr.
-	hintVector[852] = "Go through the iron door that's in the back of the throne room, then go up the steps and along to find a door that's barred.";
-	hintVector[853] = "Use the door bar to get it out of the way, then go through the door to find a room with two slumbering draugr.";
-	hintVector[854] = "If you don't want to fight the draugr, you can just cross the room and use the exit door to get outside, then fast-travel back to Solitude.";
-	hintVector[855] = "Return to the Hall of the Dead and talk to Styrr about Potema's remains to finish this objective.";
+	hintVector[812] = "Go through the iron door that's in the back of the throne room, then go up the steps and along to find a door that's barred.";
+	hintVector[813] = "Use the door bar to get it out of the way, then go through the door to find a room with two slumbering draugr.";
+	hintVector[814] = "If you don't want to fight the draugr, you can just cross the room and use the exit door to get outside, then fast-travel back to Solitude.";
+	hintVector[815] = "Return to the Hall of the Dead and talk to Styrr about Potema's remains to finish this objective.";
 	// Return to Falk Firebeard.
-	hintVector[856] = "Return to the Blue Palace and talk to Falk Firebeard about Potema to finish the quest and get some gold and the unique Shield of Solitude. (Note that the shield is leveled, so you may want to wait to claim it until you're level 40 or higher so you'll get the best version.)";
+	hintVector[816] = "Return to the Blue Palace and talk to Falk Firebeard about Potema to finish the quest and get some gold and the unique Shield of Solitude. (Note that the shield is leveled, so you may want to wait to claim it until you're level 40 or higher so you'll get the best version.)";
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// SIDE QUESTS ENDS HERE.
 
@@ -2971,7 +3678,7 @@ void hintChoices(int hintCounter, int hintEnd, int userStepChoice, vector<string
 			cout << stepNumber << ". " << hintVector[i] << endl;
 			stepNumber++;
 		}
-		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl; // Space for output.
+		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/n" << endl; // Space for output.
 		cout << "Type '1' to request another hint and '2' to go back to steps." << endl; // Give the user the commands they can use.
 		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl; // Space for output.
 		cin >> userHintChoice; // Set user's input to userHintChoice.
